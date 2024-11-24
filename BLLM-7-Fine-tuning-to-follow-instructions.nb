@@ -1,0 +1,154 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      5207,        146]
+NotebookOptionsPosition[      4764,        130]
+NotebookOutlinePosition[      5230,        147]
+CellTagsIndexPosition[      5187,        144]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Sebastian Raschka",
+  FontFamily->"FZLanTingHei-DB-GBK",
+  FontSize->12,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.8488288700694285, 0.3848325322346838, 0.1479972533760586]],
+ StyleBox["\[LineSeparator]",
+  FontSize->12,
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["\n",
+  FontSize->12,
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["Build a LLM from Scratch: Fine-tuning to follow instructions",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontSlant->"Italic",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox["                         ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox["<",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Build_a_LLM_from_Scratch"}, 
+     "BLLM-6-Fine-tuning-for-classification.nb", CharacterEncoding -> 
+     "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Build_a_LLM_from_Scratch/BLLM-6-Fine-\
+tuning-for-classification.nb"],
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[" ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox[">",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Build_a_LLM_from_Scratch"}, "BLLM-8-AA.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Build_a_LLM_from_Scratch/BLLM-8-AA.nb"],
+  
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox["    ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox["\[CapitalXi]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "MPAAI"}, "contents.nb", CharacterEncoding -> "UTF-8"], None},
+  
+  ButtonNote->"/Users/fengh/Documents/RDS/EDITED/MPAAI/contents.nb"],
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox["\[LineSeparator]\[LineSeparator]",
+  FontSize->12,
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["Edited by Hao Feng",
+  FontFamily->"Futura",
+  FontSize->12,
+  FontWeight->"Medium",
+  FontSlant->"Italic",
+  FontColor->RGBColor[
+   0.8488288700694285, 0.3848325322346838, 0.1479972533760586]]
+}], "Text",
+ CellMargins->{{66, -45}, {4, 12}},
+ CellChangeTimes->{{3.9397640484222183`*^9, 3.939764052679113*^9}, 
+   3.9397641564677134`*^9, 3.939764214184162*^9, {3.939774845841297*^9, 
+   3.9397748486786137`*^9}, 3.9397769383984737`*^9, 3.939777524212697*^9, {
+   3.939777679887363*^9, 3.9397776986053457`*^9}, 3.939777748637487*^9, 
+   3.939777854556375*^9, {3.939778004745451*^9, 3.939778004752576*^9}, {
+   3.939778088573533*^9, 3.9397780885805683`*^9}, {3.9397839690765333`*^9, 
+   3.9397839824858227`*^9}, 3.939948605500866*^9, {3.940303093496327*^9, 
+   3.940303093503997*^9}, {3.940303242886895*^9, 3.940303242893952*^9}, 
+   3.940741017163128*^9, {3.940741096570195*^9, 3.940741115877015*^9}, {
+   3.940741256704732*^9, 3.9407412567117643`*^9}, {3.941400477782477*^9, 
+   3.941400515893614*^9}, {3.941400771990362*^9, 3.941400785789854*^9}, {
+   3.9414012497018557`*^9, 3.941401262810306*^9}},
+ LineSpacing->{0.6999999999999997, 3},
+ Background->RGBColor[
+  0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
+ CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"]
+},
+WindowSize->{1024, 1099},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"905d2a50-0b58-46dd-b30d-96e410c6c0be"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 4206, 108, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
+ CellID->912160115]
+}
+]
+*)
+

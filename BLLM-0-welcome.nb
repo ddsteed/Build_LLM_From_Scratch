@@ -1,0 +1,648 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     29749,        640]
+NotebookOptionsPosition[     24809,        537]
+NotebookOutlinePosition[     25275,        554]
+CellTagsIndexPosition[     25232,        551]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Sebastian Raschka",
+  FontFamily->"FZLanTingHei-DB-GBK",
+  FontSize->12,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.8488288700694285, 0.3848325322346838, 0.1479972533760586]],
+ StyleBox["\[LineSeparator]",
+  FontSize->12,
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["\n",
+  FontSize->12,
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["Build a LLM from Scratch: welcome                                  \
+                          ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox[">",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Build_a_LLM_from_Scratch"}, "BLLM-1-understanding.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Build_a_LLM_from_Scratch/BLLM-1-\
+understanding.nb"],
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox["    ",
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox[ButtonBox["\[CapitalXi]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "MPAAI"}, "contents.nb", CharacterEncoding -> "UTF-8"], None},
+  
+  ButtonNote->"/Users/fengh/Documents/RDS/EDITED/MPAAI/contents.nb"],
+  FontFamily->"Arial Unicode MS",
+  FontSize->17.5,
+  FontWeight->"Regular",
+  FontColor->RGBColor[
+   0.9866483558403907, 0.9388876173037308, 0.6336003662165255]],
+ StyleBox["\[LineSeparator]\[LineSeparator]",
+  FontSize->12,
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.5, 0]],
+ StyleBox["Edited by Hao Feng",
+  FontFamily->"Futura",
+  FontSize->12,
+  FontWeight->"Medium",
+  FontSlant->"Italic",
+  FontColor->RGBColor[
+   0.8488288700694285, 0.3848325322346838, 0.1479972533760586]]
+}], "Text",
+ CellMargins->{{66, -45}, {4, 12}},
+ CellChangeTimes->{{3.9397640484222183`*^9, 3.939764052679113*^9}, 
+   3.9397641564677134`*^9, 3.939764214184162*^9, {3.939774845841297*^9, 
+   3.9397748486786137`*^9}, 3.9397769383984737`*^9, 3.939777524212697*^9, {
+   3.939777679887363*^9, 3.9397776986053457`*^9}, 3.939777748637487*^9, {
+   3.939777854556375*^9, 3.939777878635145*^9}, {3.9397779299447737`*^9, 
+   3.9397779337440853`*^9}, {3.9397779656956463`*^9, 
+   3.9397779872993917`*^9}, {3.939783995957651*^9, 3.9397839959644203`*^9}, 
+   3.93994857128743*^9, {3.9403030753694696`*^9, 3.9403030753782463`*^9}, {
+   3.940303217729404*^9, 3.940303217737211*^9}, {3.940741024123201*^9, 
+   3.940741027365489*^9}, {3.940741081934002*^9, 3.940741081942062*^9}, {
+   3.941400215845044*^9, 3.941400285856142*^9}, {3.94140032671491*^9, 
+   3.941400327415819*^9}, {3.941400437775611*^9, 3.94140045661374*^9}, {
+   3.9414010348484793`*^9, 3.9414010348566*^9}},
+ LineSpacing->{0.6999999999999997, 3},
+ Background->RGBColor[
+  0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
+ CellID->146070292,ExpressionUUID->"f3359c64-1619-4579-9f57-893260edd217"],
+
+Cell[CellGroupData[{
+
+Cell["Preface", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.93977430409951*^9, 
+   3.939774306756702*^9}, {3.939774503882483*^9, 3.939774505098134*^9}},
+ CounterAssignments->{{"Section", 0}},
+ CellID->1815624021,ExpressionUUID->"779ac440-64b9-421f-a613-32e9713c20c1"],
+
+Cell["\<\
+I\[CloseCurlyQuote]ve always been fascinated with language models. More than \
+a decade ago, my journey into AI began with a statistical pattern \
+classification class, which led to my first independent project : developing \
+a model and web application to detect the mood of a song based on its lyrics. \
+\>", "Text",
+ CellChangeTimes->{{3.9414015627027683`*^9, 3.9414015649174747`*^9}, {
+  3.9414016382115993`*^9, 3.9414016384571533`*^9}, {3.941401936780018*^9, 
+  3.941401959205077*^9}, {3.941402134509445*^9, 3.9414022239689817`*^9}},
+ CellID->1449118305,ExpressionUUID->"b5bb842b-375d-48ab-b440-4ad3f2c67e50"],
+
+Cell["\<\
+Fast forward to 2022, with the release of ChatGPT, large language models \
+(LLMs) have taken the world by storm and have revolutionized how many of us \
+work. These models are incredibly versatile, aiding in tasks such as checking \
+grammar, composing emails, summarizing lengthy documents, and much more. This \
+is owed to their ability to parse and generate human-like text, which is \
+important in various fields, from customer service to content creation, and \
+even in more technical domains like coding and data analysis. \
+\>", "Text",
+ CellChangeTimes->{{3.9414015627027683`*^9, 3.9414015649174747`*^9}, {
+  3.9414016382115993`*^9, 3.9414016384571533`*^9}, {3.941401936780018*^9, 
+  3.941401959205077*^9}, {3.941402134509445*^9, 3.9414021809629593`*^9}, {
+  3.9414022239888983`*^9, 3.941402311430242*^9}},
+ CellID->2008551737,ExpressionUUID->"0457a175-86f7-46cb-8010-505e4bf35a79"],
+
+Cell["\<\
+As their name implies, a hallmark of LLMs is that they are \"large\"\
+\[LongDash]very large\[LongDash]encompassing millions to billions of  \
+parameters. (For comparison, using more traditional machine learning or \
+statistical methods, the Iris flower dataset can be classified with more than \
+90 % accuracy using a small model with only two parameters.) However, despite \
+the large size of LLMs compared to more traditional
+ methods, LLMs don' t have to be a black box. \
+\>", "Text",
+ CellChangeTimes->{{3.9414015627027683`*^9, 3.9414015649174747`*^9}, {
+  3.9414016382115993`*^9, 3.9414016384571533`*^9}, {3.941401936780018*^9, 
+  3.941401959205077*^9}, {3.941402134509445*^9, 3.9414021809629593`*^9}, {
+  3.9414022239888983`*^9, 3.941402378511815*^9}},
+ CellID->973613422,ExpressionUUID->"1a6802f5-63e6-4b87-98f8-ce08c0dbe41e"],
+
+Cell["\<\
+In this book, you will learn how to build an LLM one step at a time. By the \
+end, you will have a solid understanding of how an LLM, like the ones used in \
+ChatGPT, works on a fundamental level. I believe that developing confidence \
+with each part of the fundamental concepts and underlying code is crucial for \
+success. This not only helps in fixing bugs and improving performance but \
+also enables experimentation
+with new ideas.\
+\>", "Text",
+ CellChangeTimes->{{3.9414015627027683`*^9, 3.9414015649174747`*^9}, {
+  3.9414016382115993`*^9, 3.9414016384571533`*^9}, {3.941401936780018*^9, 
+  3.941401959205077*^9}, {3.941402134509445*^9, 3.9414021809629593`*^9}, {
+  3.9414022239888983`*^9, 3.941402392544243*^9}, {3.9414024268828697`*^9, 
+  3.941402432691237*^9}},
+ CellID->947932159,ExpressionUUID->"25b20e09-e0e0-4b15-b29c-a954c9e4db0e"],
+
+Cell["\<\
+Several years ago, when I started working with LLMs, I had to learn how to \
+implement them the hard way, sifting through many research papers and \
+incomplete code repositories to develop a general understanding. With this \
+book, I hope to make LLMs more accessible by developing and sharing a \
+step-by-step implementation tutorial detailing all the major components and \
+development phases of an LLM.\
+\>", "Text",
+ CellChangeTimes->{{3.9414015627027683`*^9, 3.9414015649174747`*^9}, {
+  3.9414016382115993`*^9, 3.9414016384571533`*^9}, {3.941401936780018*^9, 
+  3.941401959205077*^9}, {3.941402134509445*^9, 3.9414021809629593`*^9}, {
+  3.9414022239888983`*^9, 3.941402392544243*^9}, {3.9414024268828697`*^9, 
+  3.941402427409245*^9}, {3.94140246089618*^9, 3.9414024901059504`*^9}},
+ CellID->282236992,ExpressionUUID->"3896adff-0889-4ffe-9efd-a5ca0ef50981"],
+
+Cell["\<\
+I strongly believe that the best way to understand LLMs is to code one from \
+scratch\[LongDash]and you\[CloseCurlyQuote]ll see that this can be fun too!\
+\>", "Text",
+ CellChangeTimes->{{3.941402500312484*^9, 3.941402508193306*^9}},
+ CellID->119804360,ExpressionUUID->"193ecacb-cabb-47a9-be43-a343f39d2cf2"],
+
+Cell["Happy reading and coding!", "Text",
+ CellChangeTimes->{{3.941402516413875*^9, 3.941402517832636*^9}},
+ CellID->910035286,ExpressionUUID->"14976963-05eb-404f-ae61-65d40b08933a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["acknowledgements", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.941402527619431*^9, 
+   3.9414025325838823`*^9}},
+ CellID->584517868,ExpressionUUID->"893a5f9d-9cdd-490c-a6b6-3b1332c53b91"],
+
+Cell["\<\
+Writing a book is a significant undertaking, and I would like to express my \
+sincere gratitude to my wife, Liza, for her patience and support throughout \
+this process. Her
+unconditional love and constant encouragement have been absolutely essential.\
+\
+\>", "Text",
+ CellChangeTimes->{{3.9414025490147047`*^9, 3.9414025728403063`*^9}},
+ CellID->1582875314,ExpressionUUID->"20389d80-68db-47b6-b25c-f34886851c95"],
+
+Cell["\<\
+I am incredibly grateful to Daniel Kleine, whose invaluable feedback on the \
+in-progress chapters and code went above and beyond. With his keen eye for \
+detail and insightful suggestions, Daniel\[CloseCurlyQuote]s contributions \
+have undoubtedly made this book a smoother and more enjoyable reading \
+experience.\
+\>", "Text",
+ CellChangeTimes->{{3.9414025490147047`*^9, 3.941402597027031*^9}},
+ CellID->700967923,ExpressionUUID->"f1bfcc96-78c5-40ea-8aca-5cc3b6c8d907"],
+
+Cell["\<\
+I would also like to thank the wonderful staff at Manning Publications, \
+including Michael Stephens, for the many productive discussions that helped \
+shape the direction of this book, and Dustin Archibald, whose constructive \
+feedback and guidance in adhering to the Manning guidelines have been \
+crucial. I also appreciate your flexibility in accommodating the unique \
+requirements of this unconventional from-scratch approach. A special thanks \
+to Aleksandar Dragosavljevi\[CAcute], Kari Lucke, and Mike Beady for their \
+work on the professional layouts and to Susan Honeywell and her team for \
+refining and polishing the graphics.\
+\>", "Text",
+ CellChangeTimes->{{3.9414025490147047`*^9, 3.941402623062319*^9}},
+ CellID->1075179190,ExpressionUUID->"dd2f95bd-0217-40b6-a1ce-8ffa1a1bb69f"],
+
+Cell["\<\
+I want to express my heartfelt gratitude to Robin Campbell and her \
+outstanding marketing team for their invaluable support throughout the \
+writing process.\
+\>", "Text",
+ CellChangeTimes->{{3.9414025490147047`*^9, 3.941402629845895*^9}},
+ CellID->451236000,ExpressionUUID->"978e0866-1412-411b-8deb-8c889670b128"],
+
+Cell["\<\
+Finally, I extend my thanks to the reviewers: Anandaganesh Balakrishnan, Anto \
+Aravinth, Ayush Bihani, Bassam Ismail, Benjamin Muskalla, Bruno Sonnino, \
+Christian Prokopp, Daniel Kleine, David Curran, Dibyendu Roy Chowdhury,
+Gary Pass, Georg Sommer, Giovanni Alzetta, Guillermo Alc\[AAcute]ntara, \
+Jonathan Reeves, Kunal Ghosh, Nicolas Modrzyk, Paul Silisteanu, Raul \
+Ciotescu, Scott Ling, Sriram Macharla, Sumit Pal, Vahid Mirjalili, Vaijanath \
+Rao, and Walter Reade
+for their thorough feedback on the drafts. Your keen eyes and insightful \
+comments have been essential in improving the quality of this book.\
+\>", "Text",
+ CellChangeTimes->{{3.9414025490147047`*^9, 3.9414026503916483`*^9}},
+ CellID->949531072,ExpressionUUID->"28701dc4-8baf-4b9a-b7f8-c57a1a361b28"],
+
+Cell["\<\
+To everyone who has contributed to this journey, I am sincerely grateful. \
+Your support, expertise, and dedication have been instrumental in bringing \
+this book to fruition.\
+\>", "Text",
+ CellChangeTimes->{{3.9414025490147047`*^9, 3.941402660788495*^9}},
+ CellID->105324367,ExpressionUUID->"47116f18-a4b5-4691-963e-4295ab9ca475"],
+
+Cell["Thank you!", "Text",
+ CellChangeTimes->{{3.9414025490147047`*^9, 3.9414026580427933`*^9}},
+ CellID->2040359180,ExpressionUUID->"bee9a6a0-b84d-4c56-9b63-93ee70416254"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["about this book", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.941402671970099*^9, 
+   3.941402673883004*^9}},
+ CellID->1283108155,ExpressionUUID->"4fbeed86-2c8d-4f1a-82e6-e603102110e1"],
+
+Cell[TextData[{
+ StyleBox["Build a Large Language Model (From Scratch)",
+  FontSlant->"Italic"],
+ " was written to help you understand and create your own GPT-like large \
+language models (LLMs) from the ground up. It begins by focusing on the \
+fundamentals of working with text data and coding attention mechanisms and \
+then guides you through implementing a complete GPT model from scratch. The \
+book then covers the pretraining mechanism as well as fine-\ntuning for \
+specific tasks such as text classification and following instructions. By the \
+end of this book, you\[CloseCurlyQuote]ll have a deep understanding of how \
+LLMs work and the skills to build your own models. While the models you\
+\[CloseCurlyQuote]ll create are smaller in scale compared to the large \
+foundational models, they use the same concepts and serve as powerful \
+educational tools to grasp the core mechanisms and techniques used in\n\
+building state-of-the-art LLMs."
+}], "Text",
+ CellChangeTimes->{{3.941402684078277*^9, 3.9414027361201277`*^9}},
+ CellID->1087124560,ExpressionUUID->"c9386cf6-8ffa-434e-b16f-d3804bff9253"],
+
+Cell[CellGroupData[{
+
+Cell["Who should read this book", "Subsection",
+ CellChangeTimes->{{3.941402765755604*^9, 3.941402769807273*^9}},
+ CellID->1425030033,ExpressionUUID->"eaf49a0d-97d7-44c8-aefd-d1a3493b9158"],
+
+Cell[TextData[{
+ StyleBox["Build a Large Language Model (From Scratch)",
+  FontSlant->"Italic"],
+ " is for machine learning enthusiasts, engineers, researchers, students, and \
+practitioners who want to gain a deep\nunderstanding of how LLMs work and \
+learn to build their own models from scratch. Both beginners and experienced \
+developers will be able to use their existing skills and\nknowledge to grasp \
+the concepts and techniques used in creating LLMs."
+}], "Text",
+ CellChangeTimes->{{3.941402786860531*^9, 3.94140281325758*^9}},
+ CellID->1149227832,ExpressionUUID->"6d4baebf-20f1-4507-9b29-3fb0b3ee161c"],
+
+Cell["\<\
+What sets this book apart is its comprehensive coverage of the entire process \
+of building LLMs, from working with datasets to implementing the model \
+architecture,
+pretraining on unlabeled data, and fine-tuning for specific tasks. As of this \
+writing, no other resource provides such a complete and hands-on approach to \
+building LLMs from the ground up.\
+\>", "Text",
+ CellChangeTimes->{{3.941402786860531*^9, 3.941402847903556*^9}},
+ CellID->1710577508,ExpressionUUID->"f1cffb3d-9fbb-4a24-8743-dc1f8197d25d"],
+
+Cell[TextData[{
+ "To understand the code examples in this book, you should have a solid grasp \
+of Python programming ",
+ StyleBox["(Wolfram programming---Hao Feng edited)",
+  FontSlant->"Italic"],
+ ". While some familiarity with machine learning, deep learning, and \
+artificial intelligence can be beneficial, an extensive background in these \
+areas is not required. LLMs are a unique subset of AI, so even if you\
+\[CloseCurlyQuote]re relatively new to the field, you\[CloseCurlyQuote]ll be \
+able to follow along."
+}], "Text",
+ CellChangeTimes->{{3.941402786860531*^9, 3.941402915665263*^9}},
+ CellID->743893759,ExpressionUUID->"af02df8d-2e2e-490c-b328-9bef9e60a293"],
+
+Cell[TextData[{
+ "If you have some experience with deep neural networks, you may find certain \
+concepts more familiar, as LLMs are built upon these architectures. However, \
+proficiency in PyTorch is not a prerequisite. ",
+ ButtonBox["Appendix A",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Build_a_LLM_from_Scratch"}, "BLLM-8-AA.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Build_a_LLM_from_Scratch/BLLM-8-AA.nb"],\
+
+ " provides a concise introduction to PyTorch, equipping you with the \
+necessary skills to comprehend the code examples throughout the book."
+}], "Text",
+ CellChangeTimes->{{3.941402786860531*^9, 3.941402861756981*^9}, {
+  3.9414029374079447`*^9, 3.9414029754484787`*^9}},
+ CellID->2068286228,ExpressionUUID->"a336a7db-11fe-4d98-965a-9edcd36c9f69"],
+
+Cell["\<\
+A high school\[Dash]level understanding of mathematics, particularly working \
+with vectors and matrices, can be helpful as we explore the inner workings of \
+LLMs. However, advanced mathematical knowledge is not necessary to grasp the \
+key concepts and ideas presented in this book.\
+\>", "Text",
+ CellChangeTimes->{{3.941402786860531*^9, 3.941402861756981*^9}, {
+  3.9414029374079447`*^9, 3.941403002040984*^9}},
+ CellID->2033498110,ExpressionUUID->"23045244-824a-43dd-9796-07a148cd8bbf"],
+
+Cell[TextData[{
+ "The most important prerequisite is a strong foundation in Python \
+programming ",
+ StyleBox["(Wolfram programming---Hao Feng edited)",
+  FontSlant->"Italic"],
+ ". With this knowledge, you\[CloseCurlyQuote]ll be well prepared to explore \
+the fascinating world of LLMs and understand the concepts and code examples \
+presented in this book."
+}], "Text",
+ CellChangeTimes->{{3.941402786860531*^9, 3.941402861756981*^9}, {
+  3.9414029374079447`*^9, 3.941403022649547*^9}},
+ CellID->1625006797,ExpressionUUID->"cb1db754-a9f0-489e-af51-d56d91feaf10"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["How this book is organized: A roadmap", "Subsection",
+ CellChangeTimes->{{3.941403033281295*^9, 3.941403035998341*^9}},
+ CellID->24607150,ExpressionUUID->"6b832e38-738e-4c23-bbed-54e0fa0be090"],
+
+Cell["\<\
+This book is designed to be read sequentially, as each chapter builds upon \
+the concepts and techniques introduced in the previous ones. The book is \
+divided into seven chapters that cover the essential aspects of LLMs and \
+their implementation.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.941403065593546*^9}},
+ CellID->179330160,ExpressionUUID->"e06fc2f4-f22c-4e45-84dd-1606783b42cf"],
+
+Cell["\<\
+Chapter 1 provides a high-level introduction to the fundamental concepts \
+behind LLMs. It explores the transformer architecture, which forms the basis \
+for LLMs
+such as those used on the ChatGPT platform.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.94140307579241*^9}},
+ CellID->1968359664,ExpressionUUID->"f481749f-0bc4-48dd-98b4-f37b7539fcac"],
+
+Cell["\<\
+Chapter 2 lays out a plan for building an LLM from scratch. It covers the \
+process of preparing text for LLM training, including splitting text into \
+word and subword tokens, using byte pair encoding for advanced tokenization, \
+sampling training examples with a sliding window approach, and converting \
+tokens into vectors that feed into the LLM.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.941403091651745*^9}},
+ CellID->319892557,ExpressionUUID->"3c81b638-9e6e-4bdf-b254-102a8504e1ef"],
+
+Cell["\<\
+Chapter 3 focuses on the attention mechanisms used in LLMs. It introduces a \
+basic self-attention framework and progresses to an enhanced self-attention \
+mechanism. The chapter also covers the implementation of a causal attention \
+module that enables LLMs to generate one token at a time, masking randomly \
+selected attention weights
+with dropout to reduce overfitting and stacking multiple causal attention \
+modules into a multihead attention module.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.941403113909349*^9}},
+ CellID->621437768,ExpressionUUID->"8ea58ab2-d82f-46d6-bd15-79c247ead443"],
+
+Cell["\<\
+Chapter 4 focuses on coding a GPT-like LLM that can be trained to generate \
+human-like text. It covers techniques such as normalizing layer activations \
+to stabilize neural
+network training, adding shortcut connections in deep neural networks to \
+train models more effectively, implementing transformer blocks to create GPT \
+models of
+various sizes, and computing the number of parameters and storage \
+requirements of GPT models.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.9414031676835537`*^9}},
+ CellID->475430118,ExpressionUUID->"c74133c1-63c8-4871-b602-0c7782840836"],
+
+Cell["\<\
+Chapter 5 implements the pretraining process of LLMs. It covers computing the \
+training and validation set losses to assess the quality of LLM-generated \
+text, implementing a training function and pretraining the LLM, saving and \
+loading model weights to continue training an LLM, and loading pretrained \
+weights from OpenAI.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.9414032142848473`*^9}},
+ CellID->906150379,ExpressionUUID->"36b8c8ef-cebe-45c9-885b-b20756073cdc"],
+
+Cell["\<\
+Chapter 6 introduces different LLM fine-tuning approaches. It covers \
+preparing a dataset for text classification, modifying a pretrained LLM for \
+fine-tuning, fine-tuning an LLM to identify spam messages, and evaluating the \
+accuracy of a fine-tuned LLM classifier.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.941403237939576*^9}},
+ CellID->757726333,ExpressionUUID->"b4562c7c-53c6-409c-b6db-b5023f2c4f70"],
+
+Cell["\<\
+Chapter 7 explores the instruction fine-tuning process of LLMs. It covers \
+preparing a dataset for supervised instruction fine-tuning, organizing \
+instruction data in training batches, loading a pretrained LLM and \
+fine-tuning it to follow human instructions, extracting LLM-generated \
+instruction responses for evaluation, and evaluating an
+instruction-fine-tuned LLM.\
+\>", "Text",
+ CellChangeTimes->{{3.941403047269631*^9, 3.9414032485696507`*^9}},
+ CellID->1457008335,ExpressionUUID->"8cff9901-416d-4449-b8f2-1e1d9a0b19dc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["About the code", "Subsection",
+ CellChangeTimes->{{3.941403255411483*^9, 3.941403257598977*^9}},
+ CellID->1590089893,ExpressionUUID->"5cc96907-3f1e-4833-b34f-e4fb8df51219"],
+
+Cell[TextData[{
+ "To make it as easy as possible to follow along, all code examples in this \
+book are conveniently available on the Manning website at \
+https://www.manning.com/books/build-a-large-language-model-from-scratch, as \
+well as in Jupyter notebook format on GitHub at \
+https://github.com/rasbt/LLMs-from-scratch. And don\[CloseCurlyQuote]t worry \
+about getting stuck\[LongDash]solutions to all the code exercises can be \
+found in ",
+ ButtonBox["appendix C",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
+      "EDITED", "Build_a_LLM_from_Scratch"}, "BLLM-8-AC.nb", 
+     CharacterEncoding -> "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Build_a_LLM_from_Scratch/BLLM-8-AC.nb"],\
+
+ "."
+}], "Text",
+ CellChangeTimes->{{3.9414032711631727`*^9, 3.941403337568471*^9}},
+ CellID->675164767,ExpressionUUID->"03c1344a-9791-4efa-9624-be4cd0e4f2cc"],
+
+Cell["\<\
+This book contains many examples of source code both in numbered listings and \
+in line with normal text. In both
+cases, source code is formatted in a fixed-width font like
+this to separate it from ordinary text.
+In many cases, the original source code has been
+reformatted; we\[CloseCurlyQuote]ve added line breaks and reworked
+indentation to accommodate the available page space in the
+book. In rare cases, even this was not enough, and listings
+include line-continuation markers (\:21aa). Additionally,
+comments in the source code have often been removed
+from the listings when the code is described in the text.
+Code annotations accompany many of the listings,
+highlighting important concepts.
+One of the key goals of this book is accessibility, so the
+code examples have been carefully designed to run
+efficiently on a regular laptop, without the need for any
+special hardware. But if you do have access to a GPU,
+certain sections provide helpful tips on scaling up the
+datasets and models to take advantage of that extra power.
+Throughout the book, we\[CloseCurlyQuote]ll be using PyTorch as our go-to
+tensor and a deep learning library to implement LLMs from
+the ground up. If PyTorch is new to you, I recommend you
+start with appendix A, which provides an in-depth
+introduction, complete with setup recommendations.\
+\>", "Text",
+ CellChangeTimes->{{3.9414032711631727`*^9, 3.941403316085794*^9}},
+ CellID->1546141023,ExpressionUUID->"a41b3ab5-f807-4f6f-8f08-5ed21700233d"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1024, 1099},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"8861bace-5584-420b-8e0c-c51fd7c6d3a1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 3335, 82, 130, "Text",ExpressionUUID->"f3359c64-1619-4579-9f57-893260edd217",
+ CellID->146070292],
+Cell[CellGroupData[{
+Cell[3914, 106, 303, 5, 133, "Section",ExpressionUUID->"779ac440-64b9-421f-a613-32e9713c20c1",
+ CounterAssignments->{{"Section", 0}},
+ CellID->1815624021],
+Cell[4220, 113, 624, 9, 134, "Text",ExpressionUUID->"b5bb842b-375d-48ab-b440-4ad3f2c67e50",
+ CellID->1449118305],
+Cell[4847, 124, 899, 13, 222, "Text",ExpressionUUID->"0457a175-86f7-46cb-8010-505e4bf35a79",
+ CellID->2008551737],
+Cell[5749, 139, 844, 13, 193, "Text",ExpressionUUID->"1a6802f5-63e6-4b87-98f8-ce08c0dbe41e",
+ CellID->973613422],
+Cell[6596, 154, 857, 14, 193, "Text",ExpressionUUID->"25b20e09-e0e0-4b15-b29c-a954c9e4db0e",
+ CellID->947932159],
+Cell[7456, 170, 873, 13, 163, "Text",ExpressionUUID->"3896adff-0889-4ffe-9efd-a5ca0ef50981",
+ CellID->282236992],
+Cell[8332, 185, 318, 5, 75, "Text",ExpressionUUID->"193ecacb-cabb-47a9-be43-a343f39d2cf2",
+ CellID->119804360],
+Cell[8653, 192, 182, 2, 45, "Text",ExpressionUUID->"14976963-05eb-404f-ae61-65d40b08933a",
+ CellID->910035286]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8872, 199, 229, 4, 133, "Section",ExpressionUUID->"893a5f9d-9cdd-490c-a6b6-3b1332c53b91",
+ CellID->584517868],
+Cell[9104, 205, 423, 8, 104, "Text",ExpressionUUID->"20389d80-68db-47b6-b25c-f34886851c95",
+ CellID->1582875314],
+Cell[9530, 215, 482, 8, 134, "Text",ExpressionUUID->"f1bfcc96-78c5-40ea-8aca-5cc3b6c8d907",
+ CellID->700967923],
+Cell[10015, 225, 809, 12, 252, "Text",ExpressionUUID->"dd2f95bd-0217-40b6-a1ce-8ffa1a1bb69f",
+ CellID->1075179190],
+Cell[10827, 239, 325, 6, 75, "Text",ExpressionUUID->"978e0866-1412-411b-8deb-8c889670b128",
+ CellID->451236000],
+Cell[11155, 247, 784, 12, 252, "Text",ExpressionUUID->"28701dc4-8baf-4b9a-b7f8-c57a1a361b28",
+ CellID->949531072],
+Cell[11942, 261, 342, 6, 104, "Text",ExpressionUUID->"47116f18-a4b5-4691-963e-4295ab9ca475",
+ CellID->105324367],
+Cell[12287, 269, 172, 2, 45, "Text",ExpressionUUID->"bee9a6a0-b84d-4c56-9b63-93ee70416254",
+ CellID->2040359180]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12496, 276, 227, 4, 133, "Section",ExpressionUUID->"4fbeed86-2c8d-4f1a-82e6-e603102110e1",
+ CellID->1283108155],
+Cell[12726, 282, 1111, 17, 340, "Text",ExpressionUUID->"c9386cf6-8ffa-434e-b16f-d3804bff9253",
+ CellID->1087124560],
+Cell[CellGroupData[{
+Cell[13862, 303, 189, 2, 68, "Subsection",ExpressionUUID->"eaf49a0d-97d7-44c8-aefd-d1a3493b9158",
+ CellID->1425030033],
+Cell[14054, 307, 615, 10, 163, "Text",ExpressionUUID->"6d4baebf-20f1-4507-9b29-3fb0b3ee161c",
+ CellID->1149227832],
+Cell[14672, 319, 525, 9, 163, "Text",ExpressionUUID->"f1cffb3d-9fbb-4a24-8743-dc1f8197d25d",
+ CellID->1710577508],
+Cell[15200, 330, 672, 12, 163, "Text",ExpressionUUID->"af02df8d-2e2e-490c-b328-9bef9e60a293",
+ CellID->743893759],
+Cell[15875, 344, 919, 18, 163, "Text",ExpressionUUID->"a336a7db-11fe-4d98-965a-9edcd36c9f69",
+ CellID->2068286228],
+Cell[16797, 364, 501, 8, 134, "Text",ExpressionUUID->"23045244-824a-43dd-9796-07a148cd8bbf",
+ CellID->2033498110],
+Cell[17301, 374, 563, 11, 134, "Text",ExpressionUUID->"cb1db754-a9f0-489e-af51-d56d91feaf10",
+ CellID->1625006797]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17901, 390, 199, 2, 68, "Subsection",ExpressionUUID->"6b832e38-738e-4c23-bbed-54e0fa0be090",
+ CellID->24607150],
+Cell[18103, 394, 413, 7, 104, "Text",ExpressionUUID->"e06fc2f4-f22c-4e45-84dd-1606783b42cf",
+ CellID->179330160],
+Cell[18519, 403, 371, 7, 104, "Text",ExpressionUUID->"f481749f-0bc4-48dd-98b4-f37b7539fcac",
+ CellID->1968359664],
+Cell[18893, 412, 515, 8, 163, "Text",ExpressionUUID->"3c81b638-9e6e-4bdf-b254-102a8504e1ef",
+ CellID->319892557],
+Cell[19411, 422, 621, 10, 193, "Text",ExpressionUUID->"8ea58ab2-d82f-46d6-bd15-79c247ead443",
+ CellID->621437768],
+Cell[20035, 434, 601, 11, 193, "Text",ExpressionUUID->"c74133c1-63c8-4871-b602-0c7782840836",
+ CellID->475430118],
+Cell[20639, 447, 496, 8, 163, "Text",ExpressionUUID->"36b8c8ef-cebe-45c9-885b-b20756073cdc",
+ CellID->906150379],
+Cell[21138, 457, 434, 7, 134, "Text",ExpressionUUID->"b4562c7c-53c6-409c-b6db-b5023f2c4f70",
+ CellID->757726333],
+Cell[21575, 466, 541, 9, 163, "Text",ExpressionUUID->"8cff9901-416d-4449-b8f2-1e1d9a0b19dc",
+ CellID->1457008335]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22153, 480, 178, 2, 68, "Subsection",ExpressionUUID->"5cc96907-3f1e-4833-b34f-e4fb8df51219",
+ CellID->1590089893],
+Cell[22334, 484, 953, 20, 193, "Text",ExpressionUUID->"03c1344a-9791-4efa-9624-be4cd0e4f2cc",
+ CellID->675164767],
+Cell[23290, 506, 1491, 27, 724, "Text",ExpressionUUID->"a41b3ab5-f807-4f6f-8f08-5ed21700233d",
+ CellID->1546141023]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
