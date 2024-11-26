@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[   1615776,      26702]
-NotebookOptionsPosition[   1608374,      26551]
-NotebookOutlinePosition[   1608840,      26568]
-CellTagsIndexPosition[   1608797,      26565]
+NotebookDataLength[   1615892,      26705]
+NotebookOptionsPosition[   1608492,      26554]
+NotebookOutlinePosition[   1608958,      26571]
+CellTagsIndexPosition[   1608915,      26568]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -667,7 +667,7 @@ Python and his contributions to open source."
   3.941404800172933*^9, 3.941404800232843*^9}},
  CellID->1311797154,ExpressionUUID->"25ae284f-520c-4775-b9ac-a5b18dcefca9"],
 
-Cell[BoxData[
+Cell[TextData[Cell[BoxData[
  GraphicsBox[
   TagBox[RasterBox[CompressedData["
 1:eJzs3fd7W2W2N/wzM3QeYGCA9B4CCQRICKThxLFT3HtLbCdx77bcu2zLvRe5
@@ -26504,8 +26504,11 @@ FQ==
   DefaultBaseStyle->"ImageGraphics",
   ImageSize->Automatic,
   ImageSizeRaw->{324., 388.},
-  PlotRange->{{0, 324.}, {0, 388.}}]], "Input",
- CellID->1003614949,ExpressionUUID->"aa962c5a-959b-4cd9-a1c0-13064becb1a6"],
+  PlotRange->{{0, 324.}, {
+    0, 388.}}]],ExpressionUUID->"a4d3aa49-c1f2-43ad-9c46-c789ddc0f40a"]], \
+"Text",
+ CellChangeTimes->{3.941589320379201*^9},
+ CellID->291590177,ExpressionUUID->"0faa2ed5-0f86-425b-9079-bb1030ad7947"],
 
 Cell["\<\
 Sebastian is a staff research engineer at Lightning AI, focusing on \
@@ -26691,17 +26694,17 @@ Cell[29925, 651, 229, 4, 133, "Section",ExpressionUUID->"ecef6261-988c-4580-b0ff
  CellID->802092189],
 Cell[30157, 657, 544, 10, 134, "Text",ExpressionUUID->"25ae284f-520c-4775-b9ac-a5b18dcefca9",
  CellID->1311797154],
-Cell[30704, 669, 1575784, 25838, 497, "Input",ExpressionUUID->"aa962c5a-959b-4cd9-a1c0-13064becb1a6",
- CellID->1003614949],
-Cell[1606491, 26509, 525, 8, 163, "Text",ExpressionUUID->"035dc229-bc40-424d-88d4-6423033c5cb6",
+Cell[30704, 669, 1575902, 25841, 505, "Text",ExpressionUUID->"0faa2ed5-0f86-425b-9079-bb1030ad7947",
+ CellID->291590177],
+Cell[1606609, 26512, 525, 8, 163, "Text",ExpressionUUID->"035dc229-bc40-424d-88d4-6423033c5cb6",
  CellID->435289825]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1607053, 26522, 240, 4, 133, "Section",ExpressionUUID->"7dbeaf40-df47-4c36-b67b-2cd8ef2a84d0",
+Cell[1607171, 26525, 240, 4, 133, "Section",ExpressionUUID->"7dbeaf40-df47-4c36-b67b-2cd8ef2a84d0",
  CellID->1727189109],
-Cell[1607296, 26528, 536, 10, 104, "Text",ExpressionUUID->"c0d0d851-8bba-43b1-acf2-3007c13271fb",
+Cell[1607414, 26531, 536, 10, 104, "Text",ExpressionUUID->"c0d0d851-8bba-43b1-acf2-3007c13271fb",
  CellID->220817296],
-Cell[1607835, 26540, 523, 8, 163, "Text",ExpressionUUID->"64ef1747-5950-4535-892d-0aebb0421dca",
+Cell[1607953, 26543, 523, 8, 163, "Text",ExpressionUUID->"64ef1747-5950-4535-892d-0aebb0421dca",
  CellID->1115315643]
 }, Open  ]]
 }

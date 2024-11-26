@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5216,        146]
-NotebookOptionsPosition[      4773,        130]
-NotebookOutlinePosition[      5239,        147]
-CellTagsIndexPosition[      5196,        144]
+NotebookDataLength[      7383,        206]
+NotebookOptionsPosition[      5900,        162]
+NotebookOutlinePosition[      6716,        191]
+CellTagsIndexPosition[      6630,        185]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -126,7 +126,39 @@ tuning-to-follow-instructions.nb"],
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
- CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"]
+ CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"],
+
+Cell[CellGroupData[{
+
+Cell["What is PyTorch?", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.9415760714975443`*^9},
+ CellID->1963049543,ExpressionUUID->"96087c49-2efd-4f7a-a201-996a8919765c"],
+
+Cell["Installing PyTorch", "Subsection",
+ CellChangeTimes->{3.941576080949614*^9},
+ CellTags->"A1.3",
+ CellID->1182400340,ExpressionUUID->"5e064c0d-6f57-4df5-b096-863eb44f9791"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Understanding tensors", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.9415760916309347`*^9},
+ CellID->1936328689,ExpressionUUID->"e759c59c-7d2e-4bd1-87d4-c52fc90e08bf"],
+
+Cell["Scalars, vectors, matrices, and tensors", "Subsection",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.941575894247476*^9},
+ CellID->391363259,ExpressionUUID->"9271baea-fdfe-4929-9936-f18bcb2ba53e"]
+}, Open  ]],
+
+Cell["Setting up efficient data loaders", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.94158777181642*^9},
+ CellTags->"A6",
+ CellID->1527630290,ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435"]
 },
 WindowSize->{1024, 1099},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -139,15 +171,43 @@ ExpressionUUID->"905d2a50-0b58-46dd-b30d-96e410c6c0be"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "A1.3"->{
+  Cell[4999, 137, 177, 3, 68, "Subsection",ExpressionUUID->"5e064c0d-6f57-4df5-b096-863eb44f9791",
+   CellTags->"A1.3",
+   CellID->1182400340]},
+ "A6"->{
+  Cell[5663, 156, 233, 4, 133, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
+   CellTags->"A6",
+   CellID->1527630290]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"A1.3", 6312, 174},
+ {"A6", 6466, 178}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[554, 20, 4215, 108, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
- CellID->912160115]
+ CellID->912160115],
+Cell[CellGroupData[{
+Cell[4794, 132, 202, 3, 133, "Section",ExpressionUUID->"96087c49-2efd-4f7a-a201-996a8919765c",
+ CellID->1963049543],
+Cell[4999, 137, 177, 3, 68, "Subsection",ExpressionUUID->"5e064c0d-6f57-4df5-b096-863eb44f9791",
+ CellTags->"A1.3",
+ CellID->1182400340]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5213, 145, 207, 3, 133, "Section",ExpressionUUID->"e759c59c-7d2e-4bd1-87d4-c52fc90e08bf",
+ CellID->1936328689],
+Cell[5423, 150, 225, 3, 68, "Subsection",ExpressionUUID->"9271baea-fdfe-4929-9936-f18bcb2ba53e",
+ CellID->391363259]
+}, Open  ]],
+Cell[5663, 156, 233, 4, 133, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
+ CellTags->"A6",
+ CellID->1527630290]
 }
 ]
 *)
