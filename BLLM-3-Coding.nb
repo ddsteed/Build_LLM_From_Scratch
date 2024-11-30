@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5172,        145]
-NotebookOptionsPosition[      4729,        129]
-NotebookOutlinePosition[      5195,        146]
-CellTagsIndexPosition[      5152,        143]
+NotebookDataLength[      9066,        238]
+NotebookOptionsPosition[      7541,        200]
+NotebookOutlinePosition[      8007,        217]
+CellTagsIndexPosition[      7964,        214]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -125,7 +125,78 @@ Implementing.nb"],
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
- CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"]
+ CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"],
+
+Cell[CellGroupData[{
+
+Cell["3 Coding attention mechanisms", "Chapter",
+ CellChangeTimes->{{3.941955735410425*^9, 3.94195574813638*^9}, 
+   3.941955837608788*^9},
+ CellID->386996964,ExpressionUUID->"f5d93794-0aeb-4cd5-b080-a9df3142b79f"],
+
+Cell[TextData[StyleBox["This chapter covers ",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955871697167*^9}},
+ CellID->1746333741,ExpressionUUID->"21f3ee4f-af02-4dfa-8603-08a0a2dd440f"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The reasons for using attention mechanisms in neural networks \
+\>", "Item",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955895084302*^9}},
+ CellID->57531428,ExpressionUUID->"8f80be68-9746-40d5-838c-f34c263414af"],
+
+Cell["\<\
+A basic self-attention framework, progressing to an enhanced self-attention \
+mechanism \
+\>", "Item",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955902807028*^9}},
+ CellID->1424153418,ExpressionUUID->"145d9904-d08e-443e-ad18-aa628772eada"],
+
+Cell["\<\
+A causal attention module that allows LLMs to generate one token at a time \
+\>", "Item",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955879198283*^9}, {
+  3.941955911295343*^9, 3.9419559113270693`*^9}},
+ CellID->564890920,ExpressionUUID->"c0b227af-aaf5-49d8-a321-129db0a9e462"],
+
+Cell["\<\
+Masking randomly selected attention weights with dropout to reduce \
+overfitting \
+\>", "Item",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955879198283*^9}, {
+  3.9419559170561934`*^9, 3.94195591708864*^9}},
+ CellID->1313505665,ExpressionUUID->"fe2d6ba0-d35d-431f-b07a-97dc05bbaec5"],
+
+Cell["\<\
+Stacking multiple causal attention modules into a multi- head attention \
+module \
+\>", "Item",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955879198283*^9}},
+ CellID->445230008,ExpressionUUID->"99ecf6fa-ae4b-43c5-a636-098e62841276"]
+}, Open  ]],
+
+Cell["\<\
+At this point, you know how to prepare the input text for training LLMs by \
+splitting text into individual word and subword tokens, which can be encoded \
+into vector representations, embeddings, for the LLM. \
+\>", "Text",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955865871307*^9}, {
+  3.94195593151477*^9, 3.941955931547327*^9}},
+ CellID->408623953,ExpressionUUID->"8769a640-b30d-4d30-8ac2-91dcb0c934f3"],
+
+Cell["\<\
+Now, we will look at an integral part of the LLM architecture itself, \
+attention mechanisms, as illustrated in figure 3.1. We will largely look at \
+attention mechanisms in isolation and focus on them at a mechanistic level. \
+Then we will code the remaining parts of the LLM surrounding the \
+self-attention mechanism to see it in action and to create a model to \
+generate text.\
+\>", "Text",
+ CellChangeTimes->{{3.941955842783682*^9, 3.941955865871307*^9}},
+ CellID->1386710123,ExpressionUUID->"b73095d3-fc0a-4f19-8f46-24bc7a400914"]
+}, Open  ]]
 },
 WindowSize->{1024, 1099},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -146,7 +217,29 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[554, 20, 4171, 107, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
- CellID->912160115]
+ CellID->912160115],
+Cell[CellGroupData[{
+Cell[4750, 131, 214, 3, 84, "Chapter",ExpressionUUID->"f5d93794-0aeb-4cd5-b080-a9df3142b79f",
+ CellID->386996964],
+Cell[4967, 136, 219, 3, 45, "Text",ExpressionUUID->"21f3ee4f-af02-4dfa-8603-08a0a2dd440f",
+ CellID->1746333741],
+Cell[CellGroupData[{
+Cell[5211, 143, 226, 4, 38, "Item",ExpressionUUID->"8f80be68-9746-40d5-838c-f34c263414af",
+ CellID->57531428],
+Cell[5440, 149, 254, 5, 38, "Item",ExpressionUUID->"145d9904-d08e-443e-ad18-aa628772eada",
+ CellID->1424153418],
+Cell[5697, 156, 291, 5, 38, "Item",ExpressionUUID->"c0b227af-aaf5-49d8-a321-129db0a9e462",
+ CellID->564890920],
+Cell[5991, 163, 297, 6, 38, "Item",ExpressionUUID->"fe2d6ba0-d35d-431f-b07a-97dc05bbaec5",
+ CellID->1313505665],
+Cell[6291, 171, 246, 5, 38, "Item",ExpressionUUID->"99ecf6fa-ae4b-43c5-a636-098e62841276",
+ CellID->445230008]
+}, Open  ]],
+Cell[6552, 179, 423, 7, 104, "Text",ExpressionUUID->"8769a640-b30d-4d30-8ac2-91dcb0c934f3",
+ CellID->408623953],
+Cell[6978, 188, 547, 9, 163, "Text",ExpressionUUID->"b73095d3-fc0a-4f19-8f46-24bc7a400914",
+ CellID->1386710123]
+}, Open  ]]
 }
 ]
 *)

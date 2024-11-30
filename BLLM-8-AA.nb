@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      7383,        206]
-NotebookOptionsPosition[      5900,        162]
-NotebookOutlinePosition[      6716,        191]
-CellTagsIndexPosition[      6630,        185]
+NotebookDataLength[      7954,        221]
+NotebookOptionsPosition[      6169,        169]
+NotebookOutlinePosition[      7154,        203]
+CellTagsIndexPosition[      7048,        196]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -154,6 +154,13 @@ Cell["Scalars, vectors, matrices, and tensors", "Subsection",
  CellID->391363259,ExpressionUUID->"9271baea-fdfe-4929-9936-f18bcb2ba53e"]
 }, Open  ]],
 
+Cell["Automatic differentiation made easy", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.9419533139192142`*^9, 
+   3.941953320996953*^9}},
+ CellTags->"A4",
+ CellID->1252381584,ExpressionUUID->"0b236f20-9ac8-4e44-9b25-8f7950e2d222"],
+
 Cell["Setting up efficient data loaders", "Section",
  CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
   3.94158777181642*^9},
@@ -176,16 +183,21 @@ CellTagsIndex->{
   Cell[4999, 137, 177, 3, 68, "Subsection",ExpressionUUID->"5e064c0d-6f57-4df5-b096-863eb44f9791",
    CellTags->"A1.3",
    CellID->1182400340]},
+ "A4"->{
+  Cell[5663, 156, 266, 5, 133, "Section",ExpressionUUID->"0b236f20-9ac8-4e44-9b25-8f7950e2d222",
+   CellTags->"A4",
+   CellID->1252381584]},
  "A6"->{
-  Cell[5663, 156, 233, 4, 133, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
+  Cell[5932, 163, 233, 4, 57, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
    CellTags->"A6",
    CellID->1527630290]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"A1.3", 6312, 174},
- {"A6", 6466, 178}
+ {"A1.3", 6581, 181},
+ {"A4", 6735, 185},
+ {"A6", 6885, 189}
  }
 *)
 (*NotebookFileOutline
@@ -205,7 +217,10 @@ Cell[5213, 145, 207, 3, 133, "Section",ExpressionUUID->"e759c59c-7d2e-4bd1-87d4-
 Cell[5423, 150, 225, 3, 68, "Subsection",ExpressionUUID->"9271baea-fdfe-4929-9936-f18bcb2ba53e",
  CellID->391363259]
 }, Open  ]],
-Cell[5663, 156, 233, 4, 133, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
+Cell[5663, 156, 266, 5, 133, "Section",ExpressionUUID->"0b236f20-9ac8-4e44-9b25-8f7950e2d222",
+ CellTags->"A4",
+ CellID->1252381584],
+Cell[5932, 163, 233, 4, 57, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
  CellTags->"A6",
  CellID->1527630290]
 }
