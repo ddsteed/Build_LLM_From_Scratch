@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      7954,        221]
-NotebookOptionsPosition[      6169,        169]
-NotebookOutlinePosition[      7154,        203]
-CellTagsIndexPosition[      7048,        196]
+NotebookDataLength[      9085,        251]
+NotebookOptionsPosition[      6698,        183]
+NotebookOutlinePosition[      8020,        227]
+CellTagsIndexPosition[      7874,        218]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -161,11 +161,25 @@ Cell["Automatic differentiation made easy", "Section",
  CellTags->"A4",
  CellID->1252381584,ExpressionUUID->"0b236f20-9ac8-4e44-9b25-8f7950e2d222"],
 
+Cell["Implementing multilayer neural networks", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.942045878357375*^9, 
+   3.9420458851709623`*^9}},
+ CellTags->"A5",
+ CellID->1227344039,ExpressionUUID->"a876b9d3-aeae-4b68-891f-a58ab5d3a5af"],
+
 Cell["Setting up efficient data loaders", "Section",
  CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
   3.94158777181642*^9},
  CellTags->"A6",
- CellID->1527630290,ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435"]
+ CellID->1527630290,ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435"],
+
+Cell["A typical training loop", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.9420464550184393`*^9, 
+   3.942046458761965*^9}},
+ CellTags->"A7",
+ CellID->690848239,ExpressionUUID->"cb77c6ec-93a7-4c3e-bbd4-442a90114745"]
 },
 WindowSize->{1024, 1099},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -187,17 +201,27 @@ CellTagsIndex->{
   Cell[5663, 156, 266, 5, 133, "Section",ExpressionUUID->"0b236f20-9ac8-4e44-9b25-8f7950e2d222",
    CellTags->"A4",
    CellID->1252381584]},
+ "A5"->{
+  Cell[5932, 163, 270, 5, 57, "Section",ExpressionUUID->"a876b9d3-aeae-4b68-891f-a58ab5d3a5af",
+   CellTags->"A5",
+   CellID->1227344039]},
  "A6"->{
-  Cell[5932, 163, 233, 4, 57, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
+  Cell[6205, 170, 233, 4, 57, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
    CellTags->"A6",
-   CellID->1527630290]}
+   CellID->1527630290]},
+ "A7"->{
+  Cell[6441, 176, 253, 5, 57, "Section",ExpressionUUID->"cb77c6ec-93a7-4c3e-bbd4-442a90114745",
+   CellTags->"A7",
+   CellID->690848239]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"A1.3", 6581, 181},
- {"A4", 6735, 185},
- {"A6", 6885, 189}
+ {"A1.3", 7110, 195},
+ {"A4", 7264, 199},
+ {"A5", 7414, 203},
+ {"A6", 7563, 207},
+ {"A7", 7712, 211}
  }
 *)
 (*NotebookFileOutline
@@ -220,9 +244,15 @@ Cell[5423, 150, 225, 3, 68, "Subsection",ExpressionUUID->"9271baea-fdfe-4929-993
 Cell[5663, 156, 266, 5, 133, "Section",ExpressionUUID->"0b236f20-9ac8-4e44-9b25-8f7950e2d222",
  CellTags->"A4",
  CellID->1252381584],
-Cell[5932, 163, 233, 4, 57, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
+Cell[5932, 163, 270, 5, 57, "Section",ExpressionUUID->"a876b9d3-aeae-4b68-891f-a58ab5d3a5af",
+ CellTags->"A5",
+ CellID->1227344039],
+Cell[6205, 170, 233, 4, 57, "Section",ExpressionUUID->"56ca7096-8806-4152-900c-b470642df435",
  CellTags->"A6",
- CellID->1527630290]
+ CellID->1527630290],
+Cell[6441, 176, 253, 5, 57, "Section",ExpressionUUID->"cb77c6ec-93a7-4c3e-bbd4-442a90114745",
+ CellTags->"A7",
+ CellID->690848239]
 }
 ]
 *)
