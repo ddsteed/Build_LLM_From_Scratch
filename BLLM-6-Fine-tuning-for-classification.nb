@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5233,        146]
-NotebookOptionsPosition[      4790,        130]
-NotebookOutlinePosition[      5256,        147]
-CellTagsIndexPosition[      5213,        144]
+NotebookDataLength[      8797,        223]
+NotebookOptionsPosition[      7270,        185]
+NotebookOutlinePosition[      7735,        202]
+CellTagsIndexPosition[      7692,        199]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -126,10 +126,65 @@ tuning-to-follow-instructions.nb"],
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
- CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"]
+ CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"],
+
+Cell[CellGroupData[{
+
+Cell["6 Fine-tuning for classification", "Chapter",
+ CellChangeTimes->{{3.942109155280294*^9, 3.9421091619989653`*^9}},
+ CellID->1380243901,ExpressionUUID->"0e01b05f-4670-4bcb-b418-38bf39c51d63"],
+
+Cell[TextData[StyleBox["This chapter covers",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.942109168798585*^9, 3.942109172930848*^9}},
+ CellID->601695449,ExpressionUUID->"61816a3a-5a22-4cca-b30f-b9fc406f177a"],
+
+Cell[CellGroupData[{
+
+Cell["Introducing different LLM fine-tuning approaches", "Item",
+ CellChangeTimes->{{3.942109168798585*^9, 3.942109187301667*^9}},
+ CellID->1299077676,ExpressionUUID->"74ca88f2-0939-4280-a6b9-538b37b509bf"],
+
+Cell["Preparing a dataset for text classification", "Item",
+ CellChangeTimes->{{3.942109168798585*^9, 3.942109190516446*^9}},
+ CellID->1962685342,ExpressionUUID->"a65b1990-654d-40f6-b357-f0b7df8a75d0"],
+
+Cell["Modifying a pretrained LLM for fine-tuning", "Item",
+ CellChangeTimes->{{3.942109168798585*^9, 3.9421091913906107`*^9}},
+ CellID->1216975851,ExpressionUUID->"179b7320-43d9-4fec-a536-0304e78d42bc"],
+
+Cell["Fine-tuning an LLM to identify spam messages", "Item",
+ CellChangeTimes->{{3.942109168798585*^9, 3.942109192566824*^9}},
+ CellID->289037716,ExpressionUUID->"3bca25a7-6f6b-4b90-ba1e-182d47c182bf"],
+
+Cell["Evaluating the accuracy of a fine-tuned LLM classifier", "Item",
+ CellChangeTimes->{{3.942109168798585*^9, 3.942109193285758*^9}},
+ CellID->990512105,ExpressionUUID->"1bee0725-20c3-4c6a-8dd2-fd5a92935e48"],
+
+Cell["Using a fine-tuned LLM to classify new data", "Item",
+ CellChangeTimes->{{3.942109168798585*^9, 3.942109176065137*^9}},
+ CellID->1726925791,ExpressionUUID->"7a491314-e9f6-4327-8e1a-f0fa21748f3f"]
+}, Open  ]],
+
+Cell["\<\
+So far, we have coded the LLM architecture, pretrained it,
+and learned how to import pretrained weights from an
+external source, such as OpenAI, into our model. Now we
+will reap the fruits of our labor by fine-tuning the LLM on a
+specific target task, such as classifying text. The concrete
+example we examine is classifying text messages as \
+\[OpenCurlyDoubleQuote]spam\[CloseCurlyDoubleQuote]
+or \[OpenCurlyDoubleQuote]not spam.\[CloseCurlyDoubleQuote] Figure 6.1 \
+highlights the two main ways of
+fine-tuning an LLM: fine-tuning for classification (step 8) and
+fine-tuning to follow instructions (step 9).\
+\>", "Text",
+ CellChangeTimes->{3.942109168798585*^9},
+ CellID->1997922113,ExpressionUUID->"55a0427a-b9a4-4238-b181-4fe16dd6cee7"]
+}, Open  ]]
 },
-WindowSize->{1024, 1099},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{960, 1027},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
   CharacterEncoding -> "UTF-8"],
@@ -147,7 +202,29 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[554, 20, 4232, 108, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
- CellID->912160115]
+ CellID->912160115],
+Cell[CellGroupData[{
+Cell[4811, 132, 195, 2, 84, "Chapter",ExpressionUUID->"0e01b05f-4670-4bcb-b418-38bf39c51d63",
+ CellID->1380243901],
+Cell[5009, 136, 217, 3, 45, "Text",ExpressionUUID->"61816a3a-5a22-4cca-b30f-b9fc406f177a",
+ CellID->601695449],
+Cell[CellGroupData[{
+Cell[5251, 143, 206, 2, 38, "Item",ExpressionUUID->"74ca88f2-0939-4280-a6b9-538b37b509bf",
+ CellID->1299077676],
+Cell[5460, 147, 201, 2, 38, "Item",ExpressionUUID->"a65b1990-654d-40f6-b357-f0b7df8a75d0",
+ CellID->1962685342],
+Cell[5664, 151, 202, 2, 38, "Item",ExpressionUUID->"179b7320-43d9-4fec-a536-0304e78d42bc",
+ CellID->1216975851],
+Cell[5869, 155, 201, 2, 38, "Item",ExpressionUUID->"3bca25a7-6f6b-4b90-ba1e-182d47c182bf",
+ CellID->289037716],
+Cell[6073, 159, 211, 2, 38, "Item",ExpressionUUID->"1bee0725-20c3-4c6a-8dd2-fd5a92935e48",
+ CellID->990512105],
+Cell[6287, 163, 201, 2, 38, "Item",ExpressionUUID->"7a491314-e9f6-4327-8e1a-f0fa21748f3f",
+ CellID->1726925791]
+}, Open  ]],
+Cell[6503, 168, 751, 14, 281, "Text",ExpressionUUID->"55a0427a-b9a4-4238-b181-4fe16dd6cee7",
+ CellID->1997922113]
+}, Open  ]]
 }
 ]
 *)
