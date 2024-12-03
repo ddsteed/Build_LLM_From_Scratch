@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5506,        152]
-NotebookOptionsPosition[      4949,        134]
-NotebookOutlinePosition[      5414,        151]
-CellTagsIndexPosition[      5371,        148]
+NotebookDataLength[      5955,        165]
+NotebookOptionsPosition[      5249,        143]
+NotebookOutlinePosition[      5714,        160]
+CellTagsIndexPosition[      5671,        157]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -89,9 +89,10 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     FrontEnd`FileName[{$RootDirectory, "Users", "fengh", "Documents", "RDS", 
-      "EDITED", "MPAAI"}, "contents.nb", CharacterEncoding -> "UTF-8"], None},
-  
-  ButtonNote->"/Users/fengh/Documents/RDS/EDITED/MPAAI/contents.nb"],
+      "EDITED", "Build_a_LLM_from_Scratch"}, "contents.nb", CharacterEncoding -> 
+     "UTF-8"], None},
+  ButtonNote->
+   "/Users/fengh/Documents/RDS/EDITED/Build_a_LLM_from_Scratch/contents.nb"],
   FontFamily->"Arial Unicode MS",
   FontSize->17.5,
   FontWeight->"Regular",
@@ -122,15 +123,23 @@ Cell[TextData[{
    3.940741256704732*^9, 3.9407412567117643`*^9}, {3.941400477782477*^9, 
    3.941400515893614*^9}, {3.941400877997445*^9, 3.941400921449568*^9}, {
    3.941401335223415*^9, 3.9414013517830143`*^9}, {3.941401407333687*^9, 
-   3.941401407343038*^9}},
+   3.941401407343038*^9}, 3.9422066566327744`*^9},
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
  CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"],
 
+Cell[CellGroupData[{
+
 Cell["Appendix C: Exercise solutions", "Chapter",
  CellChangeTimes->{{3.94220484469838*^9, 3.9422048781158*^9}},
- CellID->568005749,ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32"]
+ CellID->568005749,ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32"],
+
+Cell["Chapter 2", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.9422065315078707`*^9},
+ CellID->637476974,ExpressionUUID->"75725e69-4ee4-4cde-ac56-6514ae38e688"]
+}, Open  ]]
 },
 WindowSize->{960, 1027},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -150,10 +159,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 4201, 108, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
+Cell[554, 20, 4270, 109, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
  CellID->912160115],
-Cell[4758, 130, 187, 2, 84, "Chapter",ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32",
- CellID->568005749]
+Cell[CellGroupData[{
+Cell[4849, 133, 187, 2, 84, "Chapter",ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32",
+ CellID->568005749],
+Cell[5039, 137, 194, 3, 133, "Section",ExpressionUUID->"75725e69-4ee4-4cde-ac56-6514ae38e688",
+ CellID->637476974]
+}, Open  ]]
 }
 ]
 *)
