@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5143,        145]
-NotebookOptionsPosition[      4700,        129]
-NotebookOutlinePosition[      5166,        146]
-CellTagsIndexPosition[      5123,        143]
+NotebookDataLength[     88078,       2037]
+NotebookOptionsPosition[     67711,       1649]
+NotebookOutlinePosition[     68176,       1666]
+CellTagsIndexPosition[     68133,       1663]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -125,10 +125,1530 @@ Cell[TextData[{
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
- CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"]
+ CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"],
+
+Cell[CellGroupData[{
+
+Cell["Appendix B: References and further reading", "Chapter",
+ CellChangeTimes->{{3.942202976477413*^9, 3.942202980202753*^9}, 
+   3.942203141640291*^9},
+ CellID->731460490,ExpressionUUID->"9ada993f-7268-4fac-abbb-5120dc8f3474"],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 1", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942202992022182*^9},
+ CellID->1549508809,ExpressionUUID->"9ba9deaf-2add-4d4b-814c-24eeb11bf4cb"],
+
+Cell["\<\
+Custom-built LLMs are able to outperform general-purpose LLMs as a team at \
+Bloomberg showed via a version of GPT pretrained on finance data from \
+scratch. The custom LLM outperformed ChatGPT on financial tasks while \
+maintaining good performance on general LLM benchmarks:\
+\>", "Text",
+ CellChangeTimes->{{3.942203002471334*^9, 3.942203010205716*^9}, {
+  3.942203141662331*^9, 3.942203141715826*^9}},
+ CellID->60365694,ExpressionUUID->"4caaf733-58bf-45fe-9a43-58752ac71435"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]BloombergGPT: A Large Language Model for Finance\
+\[CloseCurlyDoubleQuote] (2023) by Wu et al., https://arxiv.org/abs/2303.17564\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942203002471334*^9, 3.9422030128459*^9}, 
+   3.942203141733387*^9},
+ CellID->1426781229,ExpressionUUID->"ad4333b1-bb20-498d-9d5e-0ed076073713"],
+
+Cell["\<\
+Existing LLMs can be adapted and fine-tuned to outperform general LLMs as \
+well, which teams from Google Research and Google DeepMind showed in a \
+medical context:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.942203037265658*^9, 3.942203037295847*^9}, {
+   3.9422031417507753`*^9, 3.942203141767877*^9}},
+ CellID->516191687,ExpressionUUID->"d9e2f6d3-a8eb-47c0-b253-882032dd52d5"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Towards Expert-Level Medical Question Answering with \
+Large Language Models\[CloseCurlyDoubleQuote] (2023) by Singhal et al., \
+https://arxiv.org/abs/2305.09617\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.94220304001094*^9, 3.942203040035418*^9}, {
+   3.942203141785252*^9, 3.9422031418028393`*^9}},
+ CellID->2083129456,ExpressionUUID->"fe43f606-5f58-4e80-9e3e-e404a5b01398"],
+
+Cell["\<\
+The following paper proposed the original transformer architecture:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.942203122117237*^9, 3.942203141820245*^9}},
+ CellID->1663965447,ExpressionUUID->"6ab44c8f-54a6-4aa8-9e03-795232d19bcb"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Attention Is All You Need\[CloseCurlyDoubleQuote] \
+(2017) by Vaswani et al., https://arxiv.org/abs/1706.03762\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.942203124025722*^9, 3.942203141837805*^9}},
+ CellID->1507184522,ExpressionUUID->"eef1ef56-fdee-4580-99a2-30add50c8fb8"],
+
+Cell["On the original encoder-style transformer, called BERT, see", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.942203130748789*^9, 3.942203130782936*^9}},
+ CellID->758442144,ExpressionUUID->"b0bbd42d-f8b9-4a22-9352-d743e9c0e3a3"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]BERT: Pre-training of Deep Bidirectional Transformers \
+for Language Understanding\[CloseCurlyDoubleQuote] (2018) by Devlin et al., \
+https://arxiv.org/abs/1810.04805\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.942203134555648*^9, 3.942203141873005*^9}},
+ CellID->1252867272,ExpressionUUID->"b7739d89-9f43-4596-a172-29f60cbeb5b2"],
+
+Cell["\<\
+The paper describing the decoder-style GPT-3 model, which inspired modern \
+LLMs and will be used as a template for implementing an LLM from scratch in \
+this book, is\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.94220315115872*^9}},
+ CellID->1561590690,ExpressionUUID->"f3dda054-dcb6-4286-8112-1fa6d875e753"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Language Models are Few-Shot Learners\
+\[CloseCurlyDoubleQuote] (2020) by Brown et al., \
+https://arxiv.org/abs/2005.14165 \
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203153878724*^9}},
+ CellID->1846666658,ExpressionUUID->"8c6c6442-e74d-4155-be58-00915755a505"],
+
+Cell["\<\
+The following covers the original vision transformer for classifying images, \
+which illustrates that transformer architectures are not only restricted to \
+text inputs: \
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203161199347*^9}},
+ CellID->225303749,ExpressionUUID->"4b3cc8d9-1903-4248-8368-faf60fab7e79"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]An Image is Worth 16x16 Words: Transformers for Image \
+Recognition at Scale\[CloseCurlyDoubleQuote] (2020) by Dosovitskiy et al., \
+https://arxiv.org/abs/2010.11929 \
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.9422031674848557`*^9}},
+ CellID->1835870660,ExpressionUUID->"a415cb23-f1b2-4db2-a7ff-d9febc914db5"],
+
+Cell["\<\
+The following experimental (but less popular) LLM architectures serve as \
+examples that not all LLMs need to be based on the transformer architecture: \
+\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.942203176857461*^9, 3.942203176891901*^9}},
+ CellID->1197669453,ExpressionUUID->"25f49288-9a63-4d8c-8113-a9f947b51ac7"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]RWKV: Reinventing RNNs for the Transformer Era\
+\[CloseCurlyDoubleQuote] (2023) by Peng et al., \
+https://arxiv.org/abs/2305.13048 \
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.9422031863950357`*^9, 3.942203186428843*^9}},
+ CellID->1649693779,ExpressionUUID->"960234ee-5bcf-4aa6-b9be-97988fb17262"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Hyena Hierarchy: Towards Larger Convolutional Language \
+Models\[CloseCurlyDoubleQuote] (2023) by Poli et al., \
+https://arxiv.org/abs/2302.10866 \
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.942203191495994*^9, 3.942203191530106*^9}},
+ CellID->868521714,ExpressionUUID->"e826e7b1-d565-4d8d-a74c-00b71e23dba4"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Mamba: Linear-Time Sequence Modeling with Selective \
+State Spaces\[CloseCurlyDoubleQuote] (2023) by Gu and Dao, \
+https://arxiv.org/abs/2312.00752 \
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.9422031947199507`*^9, 3.942203194753689*^9}},
+ CellID->1160398159,ExpressionUUID->"a008860f-8a70-4c3e-bce2-ec0b08991731"]
+}, Open  ]],
+
+Cell["\<\
+Meta AI\[CloseCurlyQuote]s model is a popular implementation of a GPT-like \
+model that is openly available in contrast to GPT-3 and ChatGPT: \
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.9422032069142103`*^9, 3.942203206948594*^9}},
+ CellID->1730267079,ExpressionUUID->"78fbb0f7-a10e-4533-81a6-d0d076d05a04"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Llama 2: Open Foundation and Fine-Tuned Chat Models\
+\[CloseCurlyDoubleQuote] (2023) by Touvron et al., \
+https://arxiv.org/abs/2307.092881 \
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.942203209298588*^9, 3.942203209333166*^9}},
+ CellID->1527406356,ExpressionUUID->"ecf7485a-93be-4581-a98f-2cddd4802d55"],
+
+Cell["\<\
+For readers interested in additional details about the dataset references in \
+section 1.5, this paper describes the publicly available \
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.94220321603821*^9, 3.942203216073048*^9}},
+ CellID->1606578951,ExpressionUUID->"b56f259b-bf76-4371-abe2-71fc8f15f8d4"],
+
+Cell["\<\
+The Pile dataset curated by Eleuther AI: \[OpenCurlyDoubleQuote]The Pile: An \
+800GB Dataset of Diverse Text for Language Modeling\[CloseCurlyDoubleQuote] \
+(2020) by Gao et al., https://arxiv.org/abs/2101.00027\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.942203224362661*^9, 3.942203224397027*^9}},
+ CellID->1937273988,ExpressionUUID->"aab28c32-d3f6-4115-b21c-04fb3c13fcf0"],
+
+Cell["\<\
+The following paper provides the reference for InstructGPT for fine-tuning \
+GPT-3, which was mentioned in section 1.6 and will be discussed in more \
+detail in chapter 7: \
+\>", "Text",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}, {
+   3.942203231348505*^9, 3.9422032313833723`*^9}},
+ CellID->139726167,ExpressionUUID->"e54d93cb-6e19-4af4-9b58-c0f28a89e716"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Training Language Models to Follow Instructions with \
+Human Feedback\[CloseCurlyDoubleQuote] (2022) by Ouyang et al., \
+https://arxiv.org/abs/2203.02155\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203002471334*^9, {3.9422031418904552`*^9, 3.942203142431264*^9}},
+ CellID->934395946,ExpressionUUID->"ddea589a-8042-4a88-bd58-5dfaadb31b99"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 2", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942203242597247*^9},
+ CellID->1992237558,ExpressionUUID->"558efaf0-e3a2-45ee-8e9f-86f60c613adf"],
+
+Cell["\<\
+Readers who are interested in discussion and comparison of embedding spaces \
+with latent spaces and the general notion of vector representations can find \
+more information in the first chapter of my book:\
+\>", "Text",
+ CellChangeTimes->{{3.9422032497371283`*^9, 3.942203254792869*^9}, {
+  3.942204054041127*^9, 3.942204054082753*^9}},
+ CellID->2119096929,ExpressionUUID->"9929c0c3-3569-49f0-845b-104232269b52"],
+
+Cell["\<\
+Machine Learning Q and AI (2023) by Sebastian Raschka, \
+https://leanpub.com/machine-learning-q-and-ai\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.9422032497371283`*^9, 3.942203257873891*^9}, 
+   3.942204054100691*^9},
+ CellID->1717021518,ExpressionUUID->"31666ab5-4d1a-43fe-81a5-df97a850ab25"],
+
+Cell["\<\
+The following paper provides more in-depth discussions of how byte pair \
+encoding is used as a tokenization method:\
+\>", "Text",
+ CellChangeTimes->{{3.9422032497371283`*^9, 3.94220326594486*^9}, 
+   3.9422040541183243`*^9},
+ CellID->696203555,ExpressionUUID->"4bbcecbe-c0f0-4fbf-9e17-42c224360d80"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Neural Machine Translation of Rare Words with Subword \
+Units\[CloseCurlyDoubleQuote] (2015) by Sennrich et al., \
+https://arxiv.org/abs/1508.07909\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.9422032497371283`*^9, 3.942203269356697*^9}, 
+   3.9422040541359663`*^9},
+ CellID->1050339698,ExpressionUUID->"5b790e7e-cf45-4bf5-af67-ddb46fb5a8b4"],
+
+Cell["\<\
+The code for the byte pair encoding tokenizer used to train GPT-2 was \
+open-sourced by OpenAI:\
+\>", "Text",
+ CellChangeTimes->{{3.9422032497371283`*^9, 3.9422032766226673`*^9}, 
+   3.942204054153553*^9},
+ CellID->1978957499,ExpressionUUID->"c48ee035-433f-45cf-9c71-1d2e60e9113a"],
+
+Cell["https://github.com/openai/gpt-2/blob/master/src/encoder.py", \
+"ItemNumbered",
+ CellChangeTimes->{{3.9422032497371283`*^9, 3.942203279369417*^9}},
+ CellID->1379054181,ExpressionUUID->"e16f5749-78d9-49c9-a89c-0f5040994016"],
+
+Cell["\<\
+OpenAI provides an interactive web UI to illustrate how the byte pair \
+tokenizer in GPT models works:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422032497371283`*^9, {3.942203287433913*^9, 3.942203287466752*^9}, 
+   3.942204054170787*^9},
+ CellID->1629752547,ExpressionUUID->"2704c4d5-195a-49b2-93b7-9ff95bec9460"],
+
+Cell["https://platform.openai.com/tokenizer", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422032497371283`*^9, {3.942203289969062*^9, 3.942203289999428*^9}},
+ CellID->634289941,ExpressionUUID->"808d7ea4-375a-4997-ab71-f805fdec96b2"],
+
+Cell["\<\
+For readers interested in coding and training a BPE tokenizer from the ground \
+up, Andrej Karpathy\[CloseCurlyQuote]s GitHub repository minbpe offers a \
+minimal and readable implementation:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422032497371283`*^9, {3.942203296617157*^9, 3.9422032966515503`*^9}, {
+   3.9422040541881847`*^9, 3.942204054222872*^9}},
+ CellID->503313508,ExpressionUUID->"7d54046f-8fda-4cc2-b397-7b734f2fc1e4"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]A Minimal Implementation of a BPE Tokenizer,\
+\[CloseCurlyDoubleQuote] https://github.com/karpathy/minbpe\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422032497371283`*^9, {3.942203301024846*^9, 3.942203301059557*^9}, 
+   3.942204054240478*^9},
+ CellID->1759705422,ExpressionUUID->"841fe6b3-4606-49d7-a09f-1a2806f6c735"],
+
+Cell["\<\
+Readers who are interested in studying alternative tokenization schemes that \
+are used by some other popularLLMs can find more information in the \
+SentencePiece and WordPiece papers:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422032497371283`*^9, {3.942203309531994*^9, 3.942203309567355*^9}, {
+   3.942204054258048*^9, 3.942204054275487*^9}},
+ CellID->770209852,ExpressionUUID->"2710c9cc-b224-468f-ae47-a0e55889c90b"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]SentencePiece: A Simple and Language Independent \
+Subword Tokenizer and Detokenizer for Neural Text Processing\
+\[CloseCurlyDoubleQuote] (2018) by Kudo and Richardson, \
+https://aclanthology.org/D18-2012/\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422032497371283`*^9, {3.9422033156652803`*^9, 3.942203315695539*^9}, {
+   3.9422040542930117`*^9, 3.942204054311455*^9}},
+ CellID->812283235,ExpressionUUID->"6eb06599-3aec-49d2-b950-44d5ae80d340"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Fast WordPiece Tokenization\[CloseCurlyDoubleQuote] \
+(2020) by Song et al., https://arxiv.org/abs/2012.15524\
+\>", "ItemNumbered",
+ CellChangeTimes->{3.9422032497371283`*^9, 3.94220405432973*^9},
+ CellID->1064720010,ExpressionUUID->"c67000e1-744b-45f0-9a0a-871061bffa98"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 3", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942203333827894*^9},
+ CellID->741219414,ExpressionUUID->"adf5dfdd-1868-4378-80c2-a230f55ec82c"],
+
+Cell["\<\
+Readers interested in learning more about Bahdanau attention for RNN and \
+language translation can find detailed insights in the following paper:\
+\>", "Text",
+ CellChangeTimes->{{3.942203341568881*^9, 3.942203347433573*^9}, {
+  3.942204054347352*^9, 3.942204054364758*^9}},
+ CellID->122054851,ExpressionUUID->"9dde8761-889d-4c25-9f42-a1740ee603a0"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]A Minimal Implementation of a BPE Tokenizer,\
+\[CloseCurlyDoubleQuote] https://github.com/karpathy/minbpe\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942203341568881*^9, 3.942203349688829*^9}, 
+   3.942204054382453*^9},
+ CellID->32903258,ExpressionUUID->"65db2ba3-79e8-4448-8c96-664d05620ad7"],
+
+Cell["\<\
+The concept of self-attention as scaled dot-product attention was introduced \
+in the original transformer paper:\
+\>", "Text",
+ CellChangeTimes->{{3.942203341568881*^9, 3.942203355119089*^9}, 
+   3.9422040544000807`*^9},
+ CellID->1851896062,ExpressionUUID->"dc05b8ba-2811-47b8-9fa1-c8b1e865b758"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Attention Is All You Need\[CloseCurlyDoubleQuote] \
+(2017) by Vaswani et al., https://arxiv.org/abs/1706.03762\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942203341568881*^9, 3.942203357039884*^9}, 
+   3.942204054417898*^9},
+ CellID->1086429595,ExpressionUUID->"52602e28-7570-4d96-a54b-cf17a18f1c9b"],
+
+Cell["\<\
+FlashAttention is a highly efficient implementation of a self- attention \
+mechanism, which accelerates the computation process by optimizing memory \
+access patterns. FlashAttention is mathematically the same as the standard \
+self-attention mechanism but optimizes the computational process for \
+efficiency:\
+\>", "Text",
+ CellChangeTimes->{{3.942203341568881*^9, 3.942203366579073*^9}, {
+  3.942204054435713*^9, 3.942204054505756*^9}},
+ CellID->369784787,ExpressionUUID->"fe8fb77a-6f13-4d27-b51b-951aab24e5c7"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]FlashAttention: Fast and Memory-Efficient Exact \
+Attention with IO- Awareness\[CloseCurlyDoubleQuote] (2022) by Dao et al., \
+https://arxiv.org/abs/2205.14135\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942203341568881*^9, 3.942203369430641*^9}, 
+   3.9422040545233517`*^9},
+ CellID->829724327,ExpressionUUID->"0695f1f1-dcbe-466f-a3f2-142d2574383d"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]FlashAttention-2: Faster Attention with Better \
+Parallelism and Work Partitioning\[CloseCurlyDoubleQuote] (2023) by Dao, \
+https://arxiv.org/abs/2307.08691\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.942203372053876*^9, 3.9422033720869303`*^9}, 
+   3.942204054541861*^9},
+ CellID->936071172,ExpressionUUID->"9b2ab4a1-fdcb-4dc1-9f8d-4a20712acab9"]
+}, Open  ]],
+
+Cell["\<\
+PyTorch implements a function for self-attention and causal attention that \
+supports FlashAttention for efficiency. This function is beta and subject to \
+change:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.942203378155205*^9, 3.9422033781890287`*^9}, {
+   3.9422040545593863`*^9, 3.9422040545766983`*^9}},
+ CellID->1109266283,ExpressionUUID->"1608670e-9b4f-452b-9559-d444f79712f5"],
+
+Cell["\<\
+scaled_dot_product_attention documentation: https://mng.bz/NRJd\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.942203380332296*^9, 3.9422033803656387`*^9}, 
+   3.942204054594441*^9},
+ CellID->357130630,ExpressionUUID->"6e890432-8792-4856-8638-f6ca67f3434b"],
+
+Cell["\<\
+PyTorch also implements an efficient MultiHeadAttention class based on the \
+scaled_ dot_product function:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.942203416937221*^9, 3.942203416962552*^9}, 
+   3.9422040546120157`*^9},
+ CellID->1603880802,ExpressionUUID->"eed8baf1-b294-44a5-bab0-3ae37e5d9673"],
+
+Cell["MultiHeadAttention documentation: https://mng.bz/DdJV", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.942203424190731*^9, 3.942203424224187*^9}},
+ CellID->338525656,ExpressionUUID->"dd55822b-6969-468c-9167-28d66be37fce"],
+
+Cell["\<\
+Dropout is a regularization technique used in neural networks to prevent \
+overfitting by randomly dropping units (along with their connections) from \
+the neural network during training:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.942203429562058*^9, 3.942203429596637*^9}, {
+   3.942204054629449*^9, 3.942204054663925*^9}},
+ CellID->801365699,ExpressionUUID->"c719dfcf-dceb-46a1-82e1-af689b3511a9"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Dropout: A Simple Way to Prevent Neural Networks from \
+Overfitting\[CloseCurlyDoubleQuote] (2014) by Srivastava et al., \
+https://jmlr.org/papers/v15/srivastava14a.xhtml\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.9422034337161922`*^9, 3.942203433750548*^9}, {
+   3.942204054681478*^9, 3.9422040546991873`*^9}},
+ CellID->405752038,ExpressionUUID->"ca806153-9704-4a2a-a528-93039cb92b58"],
+
+Cell["\<\
+While using the multi-head attention based on scaled-dot product attention \
+remains the most common variant of self- attention in practice, authors have \
+found that it\[CloseCurlyQuote]s possible to also achieve good performance \
+without the value weight matrix and projection layer:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203341568881*^9, {3.942203439881125*^9, 3.942203439915538*^9}, {
+   3.942204054716704*^9, 3.94220405476853*^9}},
+ CellID->868187621,ExpressionUUID->"5a23dca8-2633-4c39-b01a-de680b2c522e"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Simplifying Transformer Blocks\[CloseCurlyDoubleQuote] \
+(2023) by He and Hofmann, https://arxiv.org/abs/2311.01906\
+\>", "ItemNumbered",
+ CellChangeTimes->{3.942203341568881*^9, 3.942204054786222*^9},
+ CellID->196375344,ExpressionUUID->"f9aaf608-ac7a-413f-9515-88840fba5cfd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 4", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942203449318198*^9},
+ CellID->1945524816,ExpressionUUID->"f639e616-f1f1-428d-9ec5-b9d126b38696"],
+
+Cell["\<\
+The following paper introduces a technique that stabilizes the hidden state \
+dynamics neural networks by normalizing the summed inputs to the neurons \
+within a hidden layer, significantly reducing training time compared to \
+previously published methods:\
+\>", "Text",
+ CellChangeTimes->{{3.9422034575440187`*^9, 3.9422034646206284`*^9}, {
+  3.94220405480366*^9, 3.9422040548555517`*^9}},
+ CellID->849573290,ExpressionUUID->"4d2dd276-2f82-458c-8344-c026ead465bc"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Layer Normalization\[CloseCurlyDoubleQuote] (2016) by \
+Ba, Kiros, and Hinton, https://arxiv.org/abs/1607.06450\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.9422034575440187`*^9, 3.9422034662570887`*^9}, 
+   3.942204054873105*^9},
+ CellID->1113995117,ExpressionUUID->"8e310104-70d1-4fe3-9fa1-476adea833d5"],
+
+Cell["\<\
+Post-LayerNorm, used in the original transformer model, applies layer \
+normalization after the self-attention and feed forward networks. In \
+contrast, Pre-LayerNorm, as adopted in models like GPT-2 and newer LLMs, \
+applies layer normalization before these components, which can lead to more \
+stable training dynamics and has been shown to improve performance in some \
+cases, as discussed in the following papers:\
+\>", "Text",
+ CellChangeTimes->{{3.9422034575440187`*^9, 3.942203471866294*^9}, {
+  3.9422040548906507`*^9, 3.9422040549944572`*^9}},
+ CellID->653863108,ExpressionUUID->"3b7399ba-fd06-4dc5-96ff-0867ddf22a8c"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]On Layer Normalization in the Transformer Architecture\
+\[CloseCurlyDoubleQuote] (2020) by Xiong et al., \
+https://arxiv.org/abs/2002.04745\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.9422034575440187`*^9, 3.942203474986758*^9}, {
+  3.9422040550120373`*^9, 3.9422040550297623`*^9}},
+ CellID->841353616,ExpressionUUID->"6287a1ca-383a-46e2-8b19-535cf4f043bf"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]ResiDual: Transformer with Dual Residual Connections\
+\[CloseCurlyDoubleQuote] (2023) by Tie et al., \
+https://arxiv.org/abs/2304.14802\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.9422034575440187`*^9, 3.942203477923319*^9}, 
+   3.942204055047698*^9},
+ CellID->209672278,ExpressionUUID->"44ca9010-a71c-4a3d-9c7d-6f4a7d6e8ee2"]
+}, Open  ]],
+
+Cell["\<\
+A popular variant of LayerNorm used in modern LLMs is RMSNorm due to its \
+improved computing efficiency. This variant simplifies the normalization \
+process by normalizing the inputs using only the root mean square of the \
+inputs, without subtracting the mean before squaring. This means it does not \
+center the data before computing the scale. RMSNorm is described in more \
+detail in\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.9422034888883142`*^9, 3.942203488922646*^9}, {
+   3.942204055065246*^9, 3.942204055151613*^9}},
+ CellID->372709911,ExpressionUUID->"eb7fffa1-ae1f-4400-b877-77ec86558b40"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Root Mean Square Layer Normalization\
+\[CloseCurlyDoubleQuote] (2019) by Zhang and Sennrich, \
+https://arxiv.org/abs/1910.07467\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.9422034918858013`*^9, 3.942203491919609*^9}, 
+   3.9422040551692047`*^9},
+ CellID->829867479,ExpressionUUID->"58277fd2-c1f0-4e42-a4eb-079104da2bc3"],
+
+Cell["\<\
+The Gaussian Error Linear Unit (GELU) activation function combines the \
+properties of both the classic ReLU activation function and the normal \
+distribution\[CloseCurlyQuote]s cumulative distribution function to model \
+layer outputs, allowing for stochastic regularization and nonlinearities in \
+deep learning models:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.942203499225223*^9, 3.94220349925953*^9}, {
+   3.94220405518671*^9, 3.942204055256209*^9}},
+ CellID->1823159866,ExpressionUUID->"5bbfe1ae-373b-47a6-a3bc-2634f189db24"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Gaussian Error Linear Units (GELUs)\
+\[CloseCurlyDoubleQuote] (2016) by Hendricks and Gimpel, \
+https://arxiv.org/abs/1606.08415\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.942203502327838*^9, 3.942203502362625*^9}, {
+   3.942204055273828*^9, 3.942204055291588*^9}},
+ CellID->444816428,ExpressionUUID->"66a53628-6a93-4adb-a6e3-91135353ea95"],
+
+Cell["\<\
+The GPT-2 paper introduced a series of transformer-based LLMs with varying \
+sizes\[LongDash]124 million, 355 million, 774 million, and 1.5 billion \
+parameters:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.9422035101718903`*^9, 3.942203510206258*^9}, {
+   3.942204055309314*^9, 3.942204055326622*^9}},
+ CellID->851657224,ExpressionUUID->"6acea658-8329-4279-acf9-12c084124657"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Language Models Are Unsupervised Multitask Learners\
+\[CloseCurlyDoubleQuote] (2019) by Radford et al., http://mng.bz/4poV\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.942203511732357*^9, 3.942203511761228*^9}, 
+   3.942204055344254*^9},
+ CellID->535527967,ExpressionUUID->"bd67a6e2-25e0-42c6-a14e-cbc089e3b707"],
+
+Cell["\<\
+OpenAI\[CloseCurlyQuote]s GPT-3 uses fundamentally the same architecture as \
+GPT-2, except that the largest version (175 billion) is 100x larger than the \
+largest GPT-2 model and has been trained on much more data. Interested \
+readers can refer to the official GPT-3 paper by OpenAI and the technical \
+overview by Lambda Labs, which calculates that training GPT-3 on a single RTX \
+8000 consumer GPU would take 665 years:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.94220351990644*^9, 3.942203519940275*^9}, {
+   3.942204055361842*^9, 3.9422040554656*^9}},
+ CellID->1459513619,ExpressionUUID->"0012966b-a371-4af4-9b51-a691c5f79349"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Language Models are Few-Shot Learners\
+\[CloseCurlyDoubleQuote] (2023) by Brown et al., \
+https://arxiv.org/abs/2005.14165\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.9422035239117126`*^9, 3.9422035239455357`*^9}, 
+   3.942204055483201*^9},
+ CellID->141026810,ExpressionUUID->"749e49bb-349b-403f-bb20-08df4ab2a4ef"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]OpenAI\[CloseCurlyQuote]s GPT-3 Language Model: A \
+Technical Overview,\[CloseCurlyDoubleQuote] \
+https://lambdalabs.com/blog/demystifying- gpt-3\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.94220352922234*^9, 3.942203529256372*^9}, {
+   3.9422040555009117`*^9, 3.942204055518478*^9}},
+ CellID->447079754,ExpressionUUID->"f400a2d1-b000-4b93-8e2d-35cb27a3e6bb"]
+}, Open  ]],
+
+Cell["\<\
+NanoGPT is a code repository with a minimalist yet efficient implementation \
+of a GPT-2 model, similar to the model implemented in this book. While the \
+code in this book is different from nanoGPT, this repository inspired the \
+reorganization of a large GPT Python parent class implementation into smaller \
+submodules:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.942203536722555*^9, 3.942203536751775*^9}, {
+   3.942204055536026*^9, 3.942204055604884*^9}},
+ CellID->1219869915,ExpressionUUID->"b271142c-1549-4ef5-b57b-db03a849086b"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]NanoGPT, a Repository for Training Medium-Sized GPTs, \
+https://github.com/karpathy/nanoGPT\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.9422035389118*^9, 3.942203538947006*^9}, 
+   3.942204055622465*^9},
+ CellID->342744395,ExpressionUUID->"b66e4da9-9afb-4327-8961-c3f21d8af26b"],
+
+Cell["\<\
+An informative blog post showing that most of the computation in LLMs is \
+spent in the feed forward layers rather than attention layers when the \
+context size is smaller than 32,000 tokens is:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.9422035433228683`*^9, 3.942203551123288*^9}, {
+   3.942204055639965*^9, 3.942204055674408*^9}},
+ CellID->31174452,ExpressionUUID->"ee79e4f9-ea97-4da3-b5e4-4fcdaf2c8755"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]In the Long (Context) Run\[CloseCurlyDoubleQuote] by \
+Harm de Vries, https://www.harmdevries.com/post/context-length/\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.9422034575440187`*^9, {3.9422035433228683`*^9, 3.94220354335716*^9}, 
+   3.942204055691936*^9},
+ CellID->540130245,ExpressionUUID->"765439c2-3b8a-4e41-950d-cad1e008fec8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 5", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942203559993347*^9},
+ CellID->555651846,ExpressionUUID->"5201fa5f-e37b-411b-b6f1-812910874330"],
+
+Cell["\<\
+For information on detailing the loss function and applying a log \
+transformation to make it easier to handle for mathematical optimization, see \
+my lecture video:\
+\>", "Text",
+ CellChangeTimes->{{3.942203906795479*^9, 3.942203915654405*^9}, {
+  3.942204055709567*^9, 3.9422040557270613`*^9}},
+ CellID->1581678566,ExpressionUUID->"e28cf86e-26fc-4e15-88d0-2eba5db89f23"],
+
+Cell["\<\
+L8.2 Logistic Regression Loss Function, \
+https://www.youtube.com/watch?v=GxJe0DZvydM\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942203906795479*^9, 3.942203918397649*^9}, 
+   3.942204055744742*^9},
+ CellID->1012341244,ExpressionUUID->"adf42482-293e-4d3b-831c-2ac2eb0d10b6"],
+
+Cell["\<\
+The following lecture and code example by the author explain how PyTorch\
+\[CloseCurlyQuote]s cross-entropy functions works under the hood:\
+\>", "Text",
+ CellChangeTimes->{{3.942203906795479*^9, 3.942203924083044*^9}, {
+  3.942204055762374*^9, 3.942204055779889*^9}},
+ CellID->1812348955,ExpressionUUID->"1445a36e-19df-46ca-bf86-4f911e97467b"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+L8.7.1 OneHot Encoding and Multi-category Cross Entropy, \
+https://www.youtube.com/watch?v=4n71- tZ94yk\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942203906795479*^9, 3.942203925853058*^9}, {
+  3.9422040557977*^9, 3.942204055815505*^9}},
+ CellID->155921863,ExpressionUUID->"cce3147c-84b6-4753-b251-1bf6c4df75c3"],
+
+Cell["\<\
+Understanding Onehot Encoding and Cross Entropy in PyTorch, \
+https://mng.bz/o05v\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942203906795479*^9, 3.9422039278003473`*^9}, 
+   3.942204055833267*^9},
+ CellID->1136802316,ExpressionUUID->"8bb0098b-085f-42a2-acc9-6ef48666fd52"]
+}, Open  ]],
+
+Cell["\<\
+The following two papers detail the dataset, hyperparameter, and architecture \
+details used for pretraining LLMs:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942203939783085*^9, 3.942203939816543*^9}, {
+   3.9422040558508463`*^9, 3.9422040558681803`*^9}},
+ CellID->543828708,ExpressionUUID->"a8c7a001-b9a8-4851-9a3e-c8418c27d7a7"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Pythia: A Suite for Analyzing Large Language Models \
+Across Training and Scaling\[CloseCurlyDoubleQuote] (2023) by Biderman et \
+al., https://arxiv.org/abs/2304.01373\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422039425421343`*^9, 3.9422039425769243`*^9}, {
+   3.9422040558858013`*^9, 3.9422040559037447`*^9}},
+ CellID->273264382,ExpressionUUID->"4b1913a1-cf28-4999-ae97-73a7e153c225"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]OLMo: Accelerating the Science of Language Models\
+\[CloseCurlyDoubleQuote] (2024) by Groeneveld et al., \
+https://arxiv.org/abs/2402.00838\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942203944315057*^9, 3.942203944349634*^9}, {
+   3.942204055921623*^9, 3.942204055939354*^9}},
+ CellID->870883299,ExpressionUUID->"decfad80-e8b3-44d0-8774-a40903f2d428"]
+}, Open  ]],
+
+Cell["\<\
+The following supplementary code available for this book contains \
+instructions for preparing 60,000 public domain books from Project Gutenberg \
+for LLM training:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422039604530067`*^9, 3.942203960486084*^9}, {
+   3.9422040559568777`*^9, 3.94220405597427*^9}},
+ CellID->1578762242,ExpressionUUID->"856b22d8-4389-40db-b3ed-1b26cd27605c"],
+
+Cell["\<\
+Pretraining GPT on the Project Gutenberg Dataset, https://mng.bz/Bdw2\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422039631531076`*^9, 3.942203963183256*^9}, 
+   3.942204055992135*^9},
+ CellID->1150542322,ExpressionUUID->"cdb92e91-1247-44a5-934b-cefa8982b349"],
+
+Cell["\<\
+Chapter 5 discusses the pretraining of LLMs, and appendix D covers more \
+advanced training functions, such as linear warmup and cosine annealing. The \
+following paper finds that similar techniques can be successfully applied to \
+continue pretraining already pretrained LLMs, along with additional tips and \
+insights:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942203970099588*^9, 3.9422039701333733`*^9}, {
+   3.9422040560098763`*^9, 3.942204056079846*^9}},
+ CellID->1962438559,ExpressionUUID->"4f72158e-3a21-4e17-a71a-ae10a8ff5488"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Simple and Scalable Strategies to Continually \
+Pre-train Large Language Models\[CloseCurlyDoubleQuote] (2024) by Ibrahim et \
+al., https://arxiv.org/abs/2403.08763\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942203971582007*^9, 3.942203971616727*^9}, {
+   3.9422040560974827`*^9, 3.942204056115213*^9}},
+ CellID->1419812514,ExpressionUUID->"29a421ec-6134-48a0-b73f-a0415b425e2c"],
+
+Cell["\<\
+BloombergGPT is an example of a domain-specific LLM created by training on \
+both general and domain-specific text corpora, specifically in the field of \
+finance:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422039780804157`*^9, 3.9422039781149*^9}, {
+   3.94220405613266*^9, 3.9422040561498413`*^9}},
+ CellID->209401398,ExpressionUUID->"0617cebf-42b3-44eb-8ae2-fd8f1ccbd2e9"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]BloombergGPT: A Large Language Model for Finance\
+\[CloseCurlyDoubleQuote] (2023) by Wu et al., https://arxiv.org/abs/2303.17564\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942203980570858*^9, 3.942203980605281*^9}, 
+   3.9422040561674557`*^9},
+ CellID->1726319984,ExpressionUUID->"8edfef03-525b-48d9-9427-9b8ba30e58dc"],
+
+Cell["\<\
+GaLore is a recent research project that aims to make LLM pretraining more \
+efficient. The required code change boils down to just replacing PyTorch\
+\[CloseCurlyQuote]s AdamW optimizer in the training function with the \
+GaLoreAdamW optimizer provided by the galore-torch Python package:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942203986690596*^9, 3.942203986725065*^9}, {
+   3.942204056185053*^9, 3.942204056236971*^9}},
+ CellID->1550578983,ExpressionUUID->"99ed6f7e-d6d6-4802-a91b-c929157e9298"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]GaLore: Memory-Efficient LLM Training by Gradient \
+Low-Rank Projection\[CloseCurlyDoubleQuote] (2024) by Zhao et al., \
+https://arxiv.org/abs/2403.03507\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942203988803061*^9, 3.94220398883158*^9}, {
+   3.9422040562545347`*^9, 3.9422040562722692`*^9}},
+ CellID->82811155,ExpressionUUID->"abe09ac5-8d36-4104-8b06-0db1657b30b9"],
+
+Cell["\<\
+GaLore code repository, https://github.com/jiaweizzhao/GaLore\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422039915163727`*^9, 3.9422039915487957`*^9}, 
+   3.942204056290104*^9},
+ CellID->977358112,ExpressionUUID->"37a7c27a-d93b-4d51-a43f-811c8315fe3a"]
+}, Open  ]],
+
+Cell["\<\
+The following papers and resources share openly available, large-scale \
+pretraining datasets for LLMs that consist of hundreds of gigabytes to \
+terabytes of text data:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942204001373391*^9, 3.942204001405181*^9}, {
+   3.942204056307879*^9, 3.942204056325151*^9}},
+ CellID->252735999,ExpressionUUID->"efd51497-9e98-4dbb-b2b9-34ee79930246"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Dolma: An Open Corpus of Three Trillion Tokens for LLM \
+Pretraining Research\[CloseCurlyDoubleQuote] (2024) by Soldaini et al., \
+https://arxiv.org/abs/2402.00159\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942204003112405*^9, 3.9422040031472883`*^9}, {
+   3.942204056342819*^9, 3.942204056360537*^9}},
+ CellID->2050156672,ExpressionUUID->"6bae2941-480d-4edb-b580-b04f13239fc3"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]The Pile: An 800GB Dataset of Diverse Text for \
+Language Modeling\[CloseCurlyDoubleQuote] (2020) by Gao et al., \
+https://arxiv.org/abs/2101.00027\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422040056496887`*^9, 3.942204005684855*^9}, {
+   3.942204056378292*^9, 3.9422040563961887`*^9}},
+ CellID->1496489132,ExpressionUUID->"a1c9800b-87c8-433c-9f20-293a7e751c51"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]The RefinedWeb Dataset for Falcon LLM: Outperforming \
+Curated Corpora with Web Data, and Web Data Only, \[CloseCurlyDoubleQuote] \
+(2023) by Penedo et al., https://arxiv.org/abs/2306.01116\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422040171228743`*^9, 3.942204017156827*^9}, {
+   3.942204056415194*^9, 3.942204056473929*^9}},
+ CellID->1602507292,ExpressionUUID->"adc5286f-3e2a-46a9-a96a-c7b4dfe876e0"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]RedPajama,\[CloseCurlyDoubleQuote] by Together AI, \
+https://mng.bz/d6nw The FineWeb Dataset, which includes more than 15 trillion \
+tokens of cleaned and deduplicated English web data sourced from CommonCrawl, \
+https://mng.bz/rVzy\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942204020995603*^9, 3.942204021030237*^9}, {
+   3.942204056491685*^9, 3.942204056527151*^9}},
+ CellID->1485092730,ExpressionUUID->"a52340c6-1ff9-49b2-9f7b-38b39f5ee9ba"]
+}, Open  ]],
+
+Cell["The paper that originally introduced top-k sampling is", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942204030400098*^9, 3.942204030433667*^9}},
+ CellID->1591610700,ExpressionUUID->"45aa5e74-6ffa-4ef0-8579-7d9178b3deeb"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Hierarchical Neural Story Generation\
+\[CloseCurlyDoubleQuote] (2018) by Fan et al., \
+https://arxiv.org/abs/1805.04833\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942204033700671*^9, 3.942204056544901*^9}},
+ CellID->1680539895,ExpressionUUID->"203545ef-7c35-42ad-b214-9b3ba63f00f5"],
+
+Cell["\<\
+An alternative to top-k sampling is top-p sampling (not covered in chapter \
+5), which selects from the smallest set of top tokens whose cumulative \
+probability exceeds a threshold p, while top-k sampling picks from the top k \
+tokens by probability:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422040400595493`*^9, 3.942204056614766*^9}},
+ CellID->1767555799,ExpressionUUID->"88bf0370-ba98-416d-a7d0-f684a780bd7c"],
+
+Cell["Top-p sampling, https://en.wikipedia.org/wiki/Top-p_sampling", \
+"ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.9422040412294903`*^9, 3.94220407022749*^9}},
+ CellID->2350184,ExpressionUUID->"f611edaf-7250-4f87-bd9f-c9e9f7abc6af"],
+
+Cell["\<\
+Beam search (not covered in chapter 5) is an alternative decoding algorithm \
+that generates output sequences by keeping only the top-scoring partial \
+sequences at each step to balance efficiency and quality: \
+\>", "Text",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942204056650386*^9, 3.942204076274129*^9}},
+ CellID->1156500715,ExpressionUUID->"f20af432-99ea-479e-ab54-c2844e2d0361"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Diverse Beam Search: Decoding Diverse Solutions from \
+Neural Sequence Models\[CloseCurlyDoubleQuote] (2016) by Vijayakumar et \
+al.,https://arxiv.org/abs/1610.02424\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942203906795479*^9, {3.942204056650386*^9, 3.942204056720183*^9}},
+ CellID->1458775940,ExpressionUUID->"aa7ebca1-f849-48e9-81b6-48a618aea991"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 6", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942204086673843*^9},
+ CellID->1973909428,ExpressionUUID->"63c71a9a-1acf-41e4-b744-6656a9e3e5dd"],
+
+Cell["\<\
+Additional resources that discuss the different types of fine- tuning are\
+\>", "Text",
+ CellChangeTimes->{{3.942204095371505*^9, 3.942204103695265*^9}, 
+   3.94220475212538*^9},
+ CellID->1168377540,ExpressionUUID->"39b370ea-1f87-4b89-9489-0b0d69d388e1"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Using and Finetuning Pretrained Transformers,\
+\[CloseCurlyDoubleQuote] https://mng.bz/VxJG\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942204095371505*^9, 3.942204104520649*^9}, 
+   3.942204752148247*^9},
+ CellID->1196449731,ExpressionUUID->"89f8996f-f692-4cd9-90a9-fa1b5a67d7da"],
+
+Cell["\[OpenCurlyDoubleQuote]Finetuning Large Language Models,\
+\[CloseCurlyDoubleQuote] https://mng.bz/x28X", "ItemNumbered",
+ CellChangeTimes->{{3.942204095371505*^9, 3.942204105437812*^9}, 
+   3.942204752167708*^9},
+ CellID->1035980115,ExpressionUUID->"7235940a-0f9f-413c-884c-c8c3ce17fe35"]
+}, Open  ]],
+
+Cell["\<\
+Additional experiments, including a comparison of fine- tuning the first \
+output token versus the last output token, can be found in the supplementary \
+code material on GitHub:\
+\>", "Text",
+ CellChangeTimes->{{3.942204095371505*^9, 3.942204111607259*^9}, {
+  3.9422047521855927`*^9, 3.942204752220368*^9}},
+ CellID->1250313459,ExpressionUUID->"74a82254-db7f-4976-8031-2c9a0a66694c"],
+
+Cell["\<\
+Additional spam classification experiments, https://mng.bz/AdJx\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942204095371505*^9, 3.942204112498375*^9}, 
+   3.94220475223803*^9},
+ CellID->69753419,ExpressionUUID->"171c962f-442d-44fa-aff6-1a7efed6ed83"],
+
+Cell["\<\
+For a binary classification task, such as spam classification, it is \
+technically possible to use only a single output node instead of two output \
+nodes, as I discuss in the following article:\
+\>", "Text",
+ CellChangeTimes->{{3.942204095371505*^9, 3.942204118123049*^9}, {
+  3.942204752255715*^9, 3.942204752290429*^9}},
+ CellID->1369450649,ExpressionUUID->"61193fa5-947b-4a37-887e-492f012a45f7"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Losses Learned\[LongDash]Optimizing Negative \
+Log-Likelihood and Cross-Entropy in PyTorch,\[CloseCurlyDoubleQuote] \
+https://mng.bz/ZEJA\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942204095371505*^9, 3.942204119611061*^9}, 
+   3.94220475230864*^9},
+ CellID->1863677271,ExpressionUUID->"d9e9d5a3-50ee-4bd0-8c8c-ea6905ef08ae"],
+
+Cell["\<\
+You can find additional experiments on fine-tuning different layers of an LLM \
+in the following article, which shows that fine-tuning the last transformer \
+block, in addition to the output layer, improves the predictive performance \
+substantially:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204127105838*^9, 3.942204127139265*^9}, {
+   3.942204752326737*^9, 3.9422047523794737`*^9}},
+ CellID->1764190575,ExpressionUUID->"ff7fae4b-a832-4c50-83fb-fb8f1623078a"],
+
+Cell["\[OpenCurlyDoubleQuote]Finetuning Large Language Models,\
+\[CloseCurlyDoubleQuote] https://mng.bz/RZJv", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.9422041382209187`*^9, 3.942204138254373*^9}, 
+   3.942204752397211*^9},
+ CellID->1795974786,ExpressionUUID->"43ba069b-2edf-47bc-be6d-ac46c07be62a"],
+
+Cell["\<\
+Readers can find additional resources and information for dealing with \
+imbalanced classification datasets in the imbalanced-learn documentation:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204147523547*^9, 3.942204147559208*^9}, {
+   3.9422047524157963`*^9, 3.942204752435268*^9}},
+ CellID->244366874,ExpressionUUID->"694bba7b-8e9c-45f6-b76e-a5e3d5b240fa"],
+
+Cell["\[OpenCurlyDoubleQuote]Imbalanced-Learn User Guide,\
+\[CloseCurlyDoubleQuote] https://mng.bz/2KNa", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204149606112*^9, 3.94220414964036*^9}},
+ CellID->1208095032,ExpressionUUID->"0a3c53db-75d3-4e42-a610-798cb6cf230f"],
+
+Cell["\<\
+For readers interested in classifying spam emails rather than spam text \
+messages, the following resource provides a large email spam classification \
+dataset in a convenient CSV format similar to the dataset format used in \
+chapter 6:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.94220416219287*^9, 3.94220416222265*^9}, {
+   3.942204752454864*^9, 3.942204752490477*^9}},
+ CellID->1925388691,ExpressionUUID->"9abe3323-de73-416c-b110-1a74aa5312f7"],
+
+Cell["Email Spam Classification Dataset, https://mng.bz/1GEq", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204164772688*^9, 3.9422041648078413`*^9}, 
+   3.942204752508185*^9},
+ CellID->458977969,ExpressionUUID->"80801c51-22be-47fd-a9df-7cf7776917a4"],
+
+Cell["\<\
+GPT-2 is a model based on the decoder module of the transformer architecture, \
+and its primary purpose is to generate new text. As an alternative, \
+encoder-based models such as BERT and RoBERTa can be effective for \
+classification tasks:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.9422041747299023`*^9, 3.942204174763146*^9}, {
+   3.9422047525257063`*^9, 3.942204752580686*^9}},
+ CellID->314964925,ExpressionUUID->"5dde0ba6-0655-48b0-a121-78ae1f58d805"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]BERT: Pre-training of Deep Bidirectional Transformers \
+for Language Understanding\[CloseCurlyDoubleQuote] (2018) by Devlin et al., \
+https://arxiv.org/abs/1810.04805\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204176226591*^9, 3.942204176256735*^9}, {
+   3.942204752599684*^9, 3.942204752618408*^9}},
+ CellID->1363135594,ExpressionUUID->"aa1847ad-279c-492b-9549-9daf161ce131"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]RoBERTa: A Robustly Optimized BERT Pretraining \
+Approach\[CloseCurlyDoubleQuote] (2019) by Liu et al., \
+https://arxiv.org/abs/1907.11692\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204180056068*^9, 3.942204180090214*^9}, {
+   3.942204752636726*^9, 3.9422047526555653`*^9}},
+ CellID->1502998039,ExpressionUUID->"182988d4-744f-4b11-baab-f9de2cce5f2e"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Additional Experiments Classifying the Sentiment of \
+50k IMDB Movie Reviews,\[CloseCurlyDoubleQuote] https://mng.bz/PZJR\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.94220418233383*^9, 3.9422041823616333`*^9}, 
+   3.942204752675275*^9},
+ CellID->1110459748,ExpressionUUID->"d76a4748-0acd-4982-b7c9-868bf3c55bee"]
+}, Open  ]],
+
+Cell["\<\
+Recent papers are showing that the classification performance can be further \
+improved by removing the causal mask during classification fine-tuning \
+alongside other modifications:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204190303185*^9, 3.942204190327853*^9}, {
+   3.942204752693616*^9, 3.942204752731896*^9}},
+ CellID->1443442739,ExpressionUUID->"b4f998af-f08a-4db4-a720-a0fc8b345f1f"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Label Supervised LLaMA Finetuning\
+\[CloseCurlyDoubleQuote] (2023) by Li et al., https://arxiv.org/abs/2310.01208\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.942204195644628*^9, 3.94220419567942*^9}, 
+   3.942204752749655*^9},
+ CellID->1872984242,ExpressionUUID->"50665a34-f4b2-456a-8df8-6123ef0ab506"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]LLM2Vec: Large Language Models Are Secretly Powerful \
+Text Encoders\[CloseCurlyDoubleQuote] (2024) by BehnamGhader et al., \
+https://arxiv.org/abs/2404.05961\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204095371505*^9, {3.94220475276882*^9, 3.942204752787014*^9}},
+ CellID->1380037599,ExpressionUUID->"c7f2ba0d-1676-4d10-a160-82349ea2c93c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 7", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942204205146212*^9},
+ CellID->1468538793,ExpressionUUID->"9b96b96a-d23d-4e84-bd92-f0046fbd697a"],
+
+Cell["\<\
+The Alpaca dataset for instruction fine-tuning contains 52,000 instruction\
+\[Dash]response pairs and is one of the first and most popular publicly \
+available datasets for instruction fine- tuning:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.9422042654748573`*^9, 3.942204265506453*^9}, {
+   3.942204752805119*^9, 3.942204752840074*^9}},
+ CellID->701938980,ExpressionUUID->"5f54bddd-e3c6-4274-bfaa-a73c5becab4f"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Stanford Alpaca: An Instruction-Following Llama Model,\
+\[CloseCurlyDoubleQuote] https://github.com/tatsu-lab/stanford_alpaca\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204267828424*^9, 3.9422042678683157`*^9}, 
+   3.942204752857627*^9},
+ CellID->309566177,ExpressionUUID->"51809772-c7cf-41b0-90b4-e2399e9a2f07"],
+
+Cell["\<\
+Additional publicly accessible datasets suitable for instruction fine-tuning \
+include\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204277394943*^9, 3.942204277434412*^9}, 
+   3.942204752875128*^9},
+ CellID->1960157971,ExpressionUUID->"7ccbff8f-49cc-49dc-aea5-8c4b3f002461"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+LIMA, https://huggingface.co/datasets/GAIR/lima For more information, see \
+\[OpenCurlyDoubleQuote]LIMA: Less Is More for Alignment,\
+\[CloseCurlyDoubleQuote] Zhou et al., https://arxiv.org/abs/2305.11206\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204280484292*^9, 3.942204280526009*^9}, {
+   3.942204752892715*^9, 3.942204752928137*^9}},
+ CellID->495247518,ExpressionUUID->"51ceb440-d411-4109-acf4-5f6ba7061f95"],
+
+Cell["\<\
+UltraChat, https://huggingface.co/datasets/openchat/ultrachat- sharegpt\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204291886541*^9, 3.942204291925865*^9}, {
+   3.9422047529458313`*^9, 3.942204752963537*^9}},
+ CellID->869044794,ExpressionUUID->"ab83ba04-9cfe-42f7-a5f9-10e95d1d1b62"]
+}, Open  ]],
+
+Cell["\<\
+A large-scale dataset consisting of 805,000 instruction\[Dash]response pairs; \
+for more information, see \[OpenCurlyDoubleQuote]Enhancing Chat Language \
+Models by Scaling High- quality Instructional Conversations,\
+\[CloseCurlyDoubleQuote] by Ding et al., https://arxiv.org/abs/2305.14233\
+\>", "SubitemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204295980672*^9, 3.942204296021846*^9}, {
+   3.942204752981642*^9, 3.942204753035396*^9}},
+ CellID->1228975425,ExpressionUUID->"e315bddc-2f5b-406d-aee7-6e199a3cb60d"],
+
+Cell["\<\
+An Alpaca-like dataset with 52,000 instruction\[Dash]response pairs generated \
+with GPT-4 instead of GPT-3.5\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204454233425*^9, 3.942204454273283*^9}, 
+   3.9422047530530157`*^9},
+ CellID->161531627,ExpressionUUID->"1016fda0-5dcc-49a7-b7f6-49185e048e96"],
+
+Cell["Alpaca GPT4, https://mng.bz/Aa0p", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204452226511*^9, 3.942204452269065*^9}},
+ CellID->2097882988,ExpressionUUID->"cb8341d2-78a7-48e4-8dde-d0f20db1c1b9"],
+
+Cell["\<\
+Phi-3 is a 3.8-billion-parameter model with an instruction- fine-tuned \
+variant that is reported to be comparable to much larger proprietary models, \
+such as GPT-3.5:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.9422045818014107`*^9, 3.942204581841091*^9}, {
+   3.94220475307024*^9, 3.9422047530875273`*^9}},
+ CellID->137488192,ExpressionUUID->"afc6015f-28d4-4e1f-b6cb-2f4b09a97f2f"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Phi-3 Technical Report: A Highly Capable Language \
+Model Locally on Your Phone\[CloseCurlyDoubleQuote] (2024) by Abdin et al., \
+https://arxiv.org/abs/2404.14219\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204583566876*^9, 3.94220458360891*^9}, {
+   3.942204753105153*^9, 3.9422047531228848`*^9}},
+ CellID->2025275988,ExpressionUUID->"874c9a8a-60e2-4181-aaf1-0e9ba90bec82"],
+
+Cell["\<\
+Researchers propose a synthetic instruction data generation method that \
+generates 300,000 high-quality instruction- response pairs from an \
+instruction fine-tuned Llama-3 model. A pretrained Llama 3 base model \
+fine-tuned on these instruction examples performs comparably to the original \
+instruction fine-tuned Llama-3 model:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.94220458974531*^9, 3.942204589785337*^9}, {
+   3.942204753140398*^9, 3.942204753209461*^9}},
+ CellID->959075319,ExpressionUUID->"1fdb0f46-dcbb-429b-bdcd-6ae86a527667"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Magpie: Alignment Data Synthesis from Scratch by \
+Prompting Aligned LLMs with Nothing\[CloseCurlyDoubleQuote] (2024) by Xu et \
+al., https://arxiv.org/abs/2406.08464\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.9422045914073067`*^9, 3.942204591449844*^9}, {
+   3.9422047532269583`*^9, 3.9422047532446623`*^9}},
+ CellID->906880782,ExpressionUUID->"f3a9d37e-5393-4acc-9f39-26023d335011"],
+
+Cell["\<\
+Research has shown that not masking the instructions and inputs in \
+instruction fine-tuning effectively improves performance on various NLP tasks \
+and open-ended generation benchmarks, particularly when trained on datasets \
+with lengthy instructions and brief outputs or when using a small number of \
+training examples:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204599285021*^9, 3.942204599326189*^9}, {
+   3.942204753262106*^9, 3.9422047533311977`*^9}},
+ CellID->1021329671,ExpressionUUID->"26a38cb8-05c1-4dcd-841a-f2000e44faa6"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Instruction Tuning with Loss Over Instructions\
+\[CloseCurlyDoubleQuote] (2024) by Shi, https://arxiv.org/abs/2405.14394\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204602329424*^9, 3.942204602358276*^9}, 
+   3.942204753348852*^9},
+ CellID->264789638,ExpressionUUID->"039e7cea-7b8e-4e4d-a39b-b2d388f4408f"],
+
+Cell["\<\
+Prometheus and PHUDGE are openly available LLMs that match GPT-4 in \
+evaluating long-form responses with customizable criteria. We don\
+\[CloseCurlyQuote]t use these because at the time of this writing, they are \
+not supported by Ollama and thus cannot be executed efficiently on a laptop:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.9422046108526697`*^9, 3.942204610894395*^9}, {
+   3.942204753366477*^9, 3.9422047534185123`*^9}},
+ CellID->1578177601,ExpressionUUID->"3efc41c8-59db-49d5-9d9c-9c63955a7b19"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Prometheus: Inducing Finegrained Evaluation Capability \
+in Language Models\[CloseCurlyDoubleQuote] (2023) by Kim et al., \
+https://arxiv.org/abs/2310.08491\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204617676173*^9, 3.942204617718071*^9}, {
+   3.942204753436138*^9, 3.94220475345385*^9}},
+ CellID->1470144955,ExpressionUUID->"03e3510c-50dd-4b09-b328-3ee43d5f6f7a"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]PHUDGE: Phi-3 as Scalable \
+Judge\[CloseCurlyDoubleQuote] (2024) by Deshwal and Chawla, \
+\[OpenCurlyDoubleQuote]https://arxiv.org/abs/2405.08029\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204621125156*^9, 3.942204621167017*^9}, 
+   3.9422047534716473`*^9},
+ CellID->850784971,ExpressionUUID->"3e56bbd9-59c0-4a7a-ae14-c3746fbd68af"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Prometheus 2: An Open Source Language Model \
+Specialized in Evaluating Other Language Models\[CloseCurlyDoubleQuote] \
+(2024), by Kim et al., https://arxiv.org/abs/2405.01535\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204625803999*^9, 3.942204625844905*^9}, {
+   3.942204753489436*^9, 3.9422047535071287`*^9}},
+ CellID->281636039,ExpressionUUID->"306bd8a2-78dc-4043-861f-3f3e29ef80d7"]
+}, Open  ]],
+
+Cell["\<\
+The results in the following report support the view that large language \
+models primarily acquire factual knowledge during pretraining and that \
+fine-tuning mainly enhances their efficiency in using this knowledge. \
+Furthermore, this study explores how fine-tuning large language models with \
+new factual information affects their ability to use preexisting knowledge, \
+revealing that models learn new facts more slowly and their introduction \
+during fine-tuning increases the model\[CloseCurlyQuote]s tendency to \
+generate incorrect information:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204634312166*^9, 3.942204634353594*^9}, {
+   3.942204753524659*^9, 3.9422047536630707`*^9}},
+ CellID->2126713064,ExpressionUUID->"00ea03fb-0ee1-4643-911a-1824793527a3"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Does Fine-Tuning LLMs on New Knowledge Encourage \
+Hallucinations?\[CloseCurlyDoubleQuote] (2024) by Gekhman, \
+https://arxiv.org/abs/2405.05904\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204636576199*^9, 3.942204636609701*^9}, {
+   3.942204753681245*^9, 3.9422047537015467`*^9}},
+ CellID->2018862949,ExpressionUUID->"16e30ef2-f153-4080-81b6-46ef4c9f3967"],
+
+Cell["\<\
+Preference fine-tuning is an optional step after instruction fine-tuning to \
+align the LLM more closely with human preferences. The following articles by \
+the author provide more information about this process:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.942204644601389*^9, 3.942204644642042*^9}, {
+   3.942204753722775*^9, 3.942204753763035*^9}},
+ CellID->100416194,ExpressionUUID->"b82e9945-b12f-4e37-895f-45236e678fb3"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]LLM Training: RLHF and Its Alternatives,\
+\[CloseCurlyDoubleQuote] https://mng.bz/ZVPm\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204217839625*^9, {3.9422046462674437`*^9, 3.942204646308756*^9}, 
+   3.942204753782456*^9},
+ CellID->1333520692,ExpressionUUID->"525ed171-0a20-4ea2-9e3f-7aaf9f7e305c"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Tips for LLM Pretraining and Evaluating Reward Models,\
+\[CloseCurlyDoubleQuote] https://mng.bz/RNXj\
+\>", "ItemNumbered",
+ CellChangeTimes->{3.942204217839625*^9, 3.942204753801669*^9},
+ CellID->284334712,ExpressionUUID->"3d5b8be4-a18a-4cf3-8167-663006bc3afa"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Appendix A", "Section",
+ CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
+  3.942204653454236*^9},
+ CellID->662390009,ExpressionUUID->"be5db069-22ab-407d-b26d-5271f5e359a1"],
+
+Cell["\<\
+While appendix A should be sufficient to get you up to speed, if you are \
+looking for more comprehensive introductions to deep learning, I recommend \
+the following books:\
+\>", "Text",
+ CellChangeTimes->{{3.942204661525689*^9, 3.94220467150876*^9}, {
+  3.942204753820595*^9, 3.942204753858734*^9}},
+ CellID->233655215,ExpressionUUID->"aeb68611-3ecc-45e6-a220-8d866c5be035"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Machine Learning with PyTorch and Scikit-Learn (2022) by Sebastian Raschka, \
+Hayden Liu, and Vahid Mirjalili. ISBN 978-1801819312\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942204661525689*^9, 3.942204674972376*^9}, {
+  3.942204753877594*^9, 3.942204753896323*^9}},
+ CellID->27111467,ExpressionUUID->"34e6f49f-6864-449b-9fe4-8600108abc48"],
+
+Cell["\<\
+Deep Learning with PyTorch (2021) by Eli Stevens, Luca Antiga, and Thomas \
+Viehmann. ISBN 978-1617295263\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942204661525689*^9, 3.942204677956575*^9}, 
+   3.942204753915262*^9},
+ CellID->1627180595,ExpressionUUID->"32b7fd3f-60c0-4b7c-a4ba-b450d900271e"]
+}, Open  ]],
+
+Cell["\<\
+For a more thorough introduction to the concepts of tensors, readers can find \
+a 15-minute video tutorial that I recorded:\
+\>", "Text",
+ CellChangeTimes->{{3.942204661525689*^9, 3.942204684920732*^9}, {
+  3.942204753933527*^9, 3.942204753951079*^9}},
+ CellID->1620235336,ExpressionUUID->"efc7285e-0dfa-450c-be2b-aca49aca282a"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Lecture 4.1: Tensors in Deep Learning,\
+\[CloseCurlyDoubleQuote] https://www.youtube.com/watch?v=JXfDlgrfOBY\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.942204661525689*^9, 3.9422046863847*^9}, 
+   3.942204753968796*^9},
+ CellID->193397907,ExpressionUUID->"9c2f8ed3-0dc9-454b-a606-91f8e3a70544"],
+
+Cell["\<\
+If you want to learn more about model evaluation in machine learning, I \
+recommend my article\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204661525689*^9, {3.9422046920635967`*^9, 3.942204692091179*^9}, 
+   3.942204753986491*^9},
+ CellID->1783657122,ExpressionUUID->"763d5d5e-4306-444c-b5e1-03c50c628d8f"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Model Evaluation, Model Selection, and Algorithm \
+Selection in Machine Learning\[CloseCurlyDoubleQuote] (2018) by Sebastian \
+Raschka, https://arxiv.org/abs/1811.12808\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204661525689*^9, {3.942204695225259*^9, 3.942204695266514*^9}, {
+   3.9422047540042257`*^9, 3.94220475402219*^9}},
+ CellID->760801248,ExpressionUUID->"2f36744f-99c8-4cd5-bb19-20fa0336fe1d"],
+
+Cell["\<\
+For readers who are interested in a refresher or gentle introduction to \
+calculus, I\[CloseCurlyQuote]ve written a chapter on calculus that is freely \
+available on my website:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204661525689*^9, {3.9422047028760643`*^9, 3.9422047029160748`*^9}, {
+   3.9422047540398684`*^9, 3.942204754057171*^9}},
+ CellID->260754720,ExpressionUUID->"f3a04592-c066-488c-a82e-d85e1f170db1"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Introduction to Calculus,\[CloseCurlyDoubleQuote] by \
+Sebastian Raschka, https://mng.bz/WEyW\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204661525689*^9, {3.94220470469099*^9, 3.942204704731583*^9}, 
+   3.942204754074842*^9},
+ CellID->471320422,ExpressionUUID->"9f0ccf44-d939-4189-9a2d-fe7253f097a8"],
+
+Cell["\<\
+Why does PyTorch not call optimizer.zero_grad() automatically for us in the \
+background? In some instances, it may be desirable to accumulate the \
+gradients, and PyTorch will leave this as an option for us. If you want to \
+learn more about gradient accumulation, please see the following article:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204661525689*^9, {3.942204713254739*^9, 3.9422047132958393`*^9}, {
+   3.9422047540924253`*^9, 3.94220475416173*^9}},
+ CellID->692368113,ExpressionUUID->"dd975042-765f-4fc8-883e-b0d8590d18b4"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Finetuning Large Language Models on a Single GPU Using \
+Gradient Accumulation\[CloseCurlyDoubleQuote] by Sebastian Raschka, \
+https://mng.bz/8wPD\
+\>", "ItemNumbered",
+ CellChangeTimes->{
+  3.942204661525689*^9, {3.9422047294407053`*^9, 3.942204754198291*^9}},
+ CellID->216750192,ExpressionUUID->"cbf9f388-11e4-4c8b-b40f-89396ccf5602"],
+
+Cell["\<\
+This appendix covers DDP, which is a popular approach for training deep \
+learning models across multiple GPUs. For more advanced use cases where a \
+single model doesn\[CloseCurlyQuote]t fit onto the GPU, you may also consider \
+PyTorch\[CloseCurlyQuote]s Fully Sharded Data Parallel (FSDP) method, which \
+performs distributed data parallelism and distributes large layers across \
+different GPUs. For more information, see this overview with further links to \
+the API documentation:\
+\>", "Text",
+ CellChangeTimes->{
+  3.942204661525689*^9, {3.9422047409903383`*^9, 3.942204754324667*^9}},
+ CellID->676890458,ExpressionUUID->"56339b91-15b1-4a08-a17d-1f735b3abab4"],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Introducing PyTorch Fully Sharded Data Parallel (FSDP) \
+API,\[CloseCurlyDoubleQuote] https://mng.bz/EZJR\
+\>", "ItemNumbered",
+ CellChangeTimes->{3.942204661525689*^9, 3.942204754342313*^9},
+ CellID->1305312730,ExpressionUUID->"aec38d14-bc62-45d9-b4d2-589bc9e7e896"]
+}, Open  ]]
+}, Open  ]]
 },
-WindowSize->{1024, 1099},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{960, 1027},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
   CharacterEncoding -> "UTF-8"],
@@ -146,7 +1666,379 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[554, 20, 4142, 107, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
- CellID->912160115]
+ CellID->912160115],
+Cell[CellGroupData[{
+Cell[4721, 131, 228, 3, 84, "Chapter",ExpressionUUID->"9ada993f-7268-4fac-abbb-5120dc8f3474",
+ CellID->731460490],
+Cell[CellGroupData[{
+Cell[4974, 138, 193, 3, 133, "Section",ExpressionUUID->"9ba9deaf-2add-4d4b-814c-24eeb11bf4cb",
+ CellID->1549508809],
+Cell[5170, 143, 489, 8, 134, "Text",ExpressionUUID->"4caaf733-58bf-45fe-9a43-58752ac71435",
+ CellID->60365694],
+Cell[5662, 153, 349, 6, 63, "ItemNumbered",ExpressionUUID->"ad4333b1-bb20-498d-9d5e-0ed076073713",
+ CellID->1426781229],
+Cell[6014, 161, 407, 8, 104, "Text",ExpressionUUID->"d9e2f6d3-a8eb-47c0-b253-882032dd52d5",
+ CellID->516191687],
+Cell[6424, 171, 434, 8, 63, "ItemNumbered",ExpressionUUID->"fe43f606-5f58-4e80-9e3e-e404a5b01398",
+ CellID->2083129456],
+Cell[6861, 181, 258, 5, 45, "Text",ExpressionUUID->"6ab44c8f-54a6-4aa8-9e03-795232d19bcb",
+ CellID->1663965447],
+Cell[7122, 188, 332, 6, 38, "ItemNumbered",ExpressionUUID->"eef1ef56-fdee-4580-99a2-30add50c8fb8",
+ CellID->1507184522],
+Cell[7457, 196, 241, 3, 45, "Text",ExpressionUUID->"b0bbd42d-f8b9-4a22-9352-d743e9c0e3a3",
+ CellID->758442144],
+Cell[7701, 201, 388, 7, 63, "ItemNumbered",ExpressionUUID->"b7739d89-9f43-4596-a172-29f60cbeb5b2",
+ CellID->1252867272],
+Cell[8092, 210, 359, 7, 75, "Text",ExpressionUUID->"f3dda054-dcb6-4286-8112-1fa6d875e753",
+ CellID->1561590690],
+Cell[8454, 219, 347, 7, 63, "ItemNumbered",ExpressionUUID->"8c6c6442-e74d-4155-be58-00915755a505",
+ CellID->1846666658],
+Cell[8804, 228, 362, 7, 75, "Text",ExpressionUUID->"4b3cc8d9-1903-4248-8368-faf60fab7e79",
+ CellID->225303749],
+Cell[9169, 237, 392, 7, 63, "ItemNumbered",ExpressionUUID->"a415cb23-f1b2-4db2-a7ff-d9febc914db5",
+ CellID->1835870660],
+Cell[9564, 246, 397, 8, 75, "Text",ExpressionUUID->"25f49288-9a63-4d8c-8113-a9f947b51ac7",
+ CellID->1197669453],
+Cell[CellGroupData[{
+Cell[9986, 258, 407, 8, 63, "ItemNumbered",ExpressionUUID->"960234ee-5bcf-4aa6-b9be-97988fb17262",
+ CellID->1649693779],
+Cell[10396, 268, 419, 8, 63, "ItemNumbered",ExpressionUUID->"e826e7b1-d565-4d8d-a74c-00b71e23dba4",
+ CellID->868521714],
+Cell[10818, 278, 424, 8, 63, "ItemNumbered",ExpressionUUID->"a008860f-8a70-4c3e-bce2-ec0b08991731",
+ CellID->1160398159]
+}, Open  ]],
+Cell[11257, 289, 387, 7, 75, "Text",ExpressionUUID->"78fbb0f7-a10e-4533-81a6-d0d076d05a04",
+ CellID->1730267079],
+Cell[11647, 298, 414, 8, 63, "ItemNumbered",ExpressionUUID->"ecf7485a-93be-4581-a98f-2cddd4802d55",
+ CellID->1527406356],
+Cell[12064, 308, 378, 7, 75, "Text",ExpressionUUID->"b56f259b-bf76-4371-abe2-71fc8f15f8d4",
+ CellID->1606578951],
+Cell[12445, 317, 462, 8, 63, "ItemNumbered",ExpressionUUID->"aab28c32-d3f6-4115-b21c-04fb3c13fcf0",
+ CellID->1937273988],
+Cell[12910, 327, 416, 8, 75, "Text",ExpressionUUID->"e54d93cb-6e19-4af4-9b58-c0f28a89e716",
+ CellID->139726167],
+Cell[13329, 337, 376, 7, 63, "ItemNumbered",ExpressionUUID->"ddea589a-8042-4a88-bd58-5dfaadb31b99",
+ CellID->934395946]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13742, 349, 193, 3, 133, "Section",ExpressionUUID->"558efaf0-e3a2-45ee-8e9f-86f60c613adf",
+ CellID->1992237558],
+Cell[13938, 354, 423, 7, 104, "Text",ExpressionUUID->"9929c0c3-3569-49f0-845b-104232269b52",
+ CellID->2119096929],
+Cell[14364, 363, 304, 6, 63, "ItemNumbered",ExpressionUUID->"31666ab5-4d1a-43fe-81a5-df97a850ab25",
+ CellID->1717021518],
+Cell[14671, 371, 310, 6, 75, "Text",ExpressionUUID->"4bbcecbe-c0f0-4fbf-9e17-42c224360d80",
+ CellID->696203555],
+Cell[14984, 379, 374, 7, 63, "ItemNumbered",ExpressionUUID->"5b790e7e-cf45-4bf5-af67-ddb46fb5a8b4",
+ CellID->1050339698],
+Cell[15361, 388, 291, 6, 75, "Text",ExpressionUUID->"c48ee035-433f-45cf-9c71-1d2e60e9113a",
+ CellID->1978957499],
+Cell[15655, 396, 228, 3, 38, "ItemNumbered",ExpressionUUID->"e16f5749-78d9-49c9-a89c-0f5040994016",
+ CellID->1379054181],
+Cell[15886, 401, 321, 7, 75, "Text",ExpressionUUID->"2704c4d5-195a-49b2-93b7-9ff95bec9460",
+ CellID->1629752547],
+Cell[16210, 410, 229, 3, 38, "ItemNumbered",ExpressionUUID->"808d7ea4-375a-4997-ab71-f805fdec96b2",
+ CellID->634289941],
+Cell[16442, 415, 437, 8, 104, "Text",ExpressionUUID->"7d54046f-8fda-4cc2-b397-7b734f2fc1e4",
+ CellID->503313508],
+Cell[16882, 425, 355, 7, 38, "ItemNumbered",ExpressionUUID->"841fe6b3-4606-49d7-a09f-1a2806f6c735",
+ CellID->1759705422],
+Cell[17240, 434, 426, 8, 104, "Text",ExpressionUUID->"2710c9cc-b224-468f-ae47-a0e55889c90b",
+ CellID->770209852],
+Cell[CellGroupData[{
+Cell[17691, 446, 482, 9, 63, "ItemNumbered",ExpressionUUID->"6eb06599-3aec-49d2-b950-44d5ae80d340",
+ CellID->812283235],
+Cell[18176, 457, 305, 5, 38, "ItemNumbered",ExpressionUUID->"c67000e1-744b-45f0-9a0a-871061bffa98",
+ CellID->1064720010]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18530, 468, 192, 3, 133, "Section",ExpressionUUID->"adf5dfdd-1868-4378-80c2-a230f55ec82c",
+ CellID->741219414],
+Cell[18725, 473, 360, 6, 75, "Text",ExpressionUUID->"9dde8761-889d-4c25-9f42-a1740ee603a0",
+ CellID->122054851],
+Cell[19088, 481, 326, 6, 38, "ItemNumbered",ExpressionUUID->"65db2ba3-79e8-4448-8c96-664d05620ad7",
+ CellID->32903258],
+Cell[19417, 489, 307, 6, 75, "Text",ExpressionUUID->"dc05b8ba-2811-47b8-9fa1-c8b1e865b758",
+ CellID->1851896062],
+Cell[19727, 497, 333, 6, 38, "ItemNumbered",ExpressionUUID->"52602e28-7570-4d96-a54b-cf17a18f1c9b",
+ CellID->1086429595],
+Cell[20063, 505, 524, 9, 134, "Text",ExpressionUUID->"fe8fb77a-6f13-4d27-b51b-951aab24e5c7",
+ CellID->369784787],
+Cell[CellGroupData[{
+Cell[20612, 518, 383, 7, 63, "ItemNumbered",ExpressionUUID->"0695f1f1-dcbe-466f-a3f2-142d2574383d",
+ CellID->829724327],
+Cell[20998, 527, 405, 8, 63, "ItemNumbered",ExpressionUUID->"9b2ab4a1-fdcb-4dc1-9f8d-4a20712acab9",
+ CellID->936071172]
+}, Open  ]],
+Cell[21418, 538, 410, 8, 75, "Text",ExpressionUUID->"1608670e-9b4f-452b-9559-d444f79712f5",
+ CellID->1109266283],
+Cell[21831, 548, 289, 6, 38, "ItemNumbered",ExpressionUUID->"6e890432-8792-4856-8638-f6ca67f3434b",
+ CellID->357130630],
+Cell[22123, 556, 325, 7, 75, "Text",ExpressionUUID->"eed8baf1-b294-44a5-bab0-3ae37e5d9673",
+ CellID->1603880802],
+Cell[22451, 565, 243, 3, 38, "ItemNumbered",ExpressionUUID->"dd55822b-6969-468c-9167-28d66be37fce",
+ CellID->338525656],
+Cell[22697, 570, 427, 8, 104, "Text",ExpressionUUID->"c719dfcf-dceb-46a1-82e1-af689b3511a9",
+ CellID->801365699],
+Cell[23127, 580, 445, 8, 63, "ItemNumbered",ExpressionUUID->"ca806153-9704-4a2a-a528-93039cb92b58",
+ CellID->405752038],
+Cell[23575, 590, 525, 9, 134, "Text",ExpressionUUID->"5a23dca8-2633-4c39-b01a-de680b2c522e",
+ CellID->868187621],
+Cell[24103, 601, 309, 5, 38, "ItemNumbered",ExpressionUUID->"f9aaf608-ac7a-413f-9515-88840fba5cfd",
+ CellID->196375344]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24449, 611, 193, 3, 133, "Section",ExpressionUUID->"f639e616-f1f1-428d-9ec5-b9d126b38696",
+ CellID->1945524816],
+Cell[24645, 616, 475, 8, 104, "Text",ExpressionUUID->"4d2dd276-2f82-458c-8344-c026ead465bc",
+ CellID->849573290],
+Cell[25123, 626, 338, 6, 38, "ItemNumbered",ExpressionUUID->"8e310104-70d1-4fe3-9fa1-476adea833d5",
+ CellID->1113995117],
+Cell[25464, 634, 637, 10, 163, "Text",ExpressionUUID->"3b7399ba-fd06-4dc5-96ff-0867ddf22a8c",
+ CellID->653863108],
+Cell[CellGroupData[{
+Cell[26126, 648, 390, 7, 63, "ItemNumbered",ExpressionUUID->"6287a1ca-383a-46e2-8b19-535cf4f043bf",
+ CellID->841353616],
+Cell[26519, 657, 359, 7, 63, "ItemNumbered",ExpressionUUID->"44ca9010-a71c-4a3d-9c7d-6f4a7d6e8ee2",
+ CellID->209672278]
+}, Open  ]],
+Cell[26893, 667, 632, 11, 163, "Text",ExpressionUUID->"eb7fffa1-ae1f-4400-b877-77ec86558b40",
+ CellID->372709911],
+Cell[27528, 680, 380, 8, 63, "ItemNumbered",ExpressionUUID->"58277fd2-c1f0-4e42-a4eb-079104da2bc3",
+ CellID->829867479],
+Cell[27911, 690, 562, 10, 134, "Text",ExpressionUUID->"5bbfe1ae-373b-47a6-a3bc-2634f189db24",
+ CellID->1823159866],
+Cell[28476, 702, 401, 8, 63, "ItemNumbered",ExpressionUUID->"66a53628-6a93-4adb-a6e3-91135353ea95",
+ CellID->444816428],
+Cell[28880, 712, 405, 8, 75, "Text",ExpressionUUID->"6acea658-8329-4279-acf9-12c084124657",
+ CellID->851657224],
+Cell[29288, 722, 371, 7, 63, "ItemNumbered",ExpressionUUID->"bd67a6e2-25e0-42c6-a14e-cbc089e3b707",
+ CellID->535527967],
+Cell[29662, 731, 665, 11, 163, "Text",ExpressionUUID->"0012966b-a371-4af4-9b51-a691c5f79349",
+ CellID->1459513619],
+Cell[CellGroupData[{
+Cell[30352, 746, 375, 8, 63, "ItemNumbered",ExpressionUUID->"749e49bb-349b-403f-bb20-08df4ab2a4ef",
+ CellID->141026810],
+Cell[30730, 756, 419, 8, 63, "ItemNumbered",ExpressionUUID->"f400a2d1-b000-4b93-8e2d-35cb27a3e6bb",
+ CellID->447079754]
+}, Open  ]],
+Cell[31164, 767, 565, 10, 134, "Text",ExpressionUUID->"b271142c-1549-4ef5-b57b-db03a849086b",
+ CellID->1219869915],
+Cell[31732, 779, 338, 7, 38, "ItemNumbered",ExpressionUUID->"b66e4da9-9afb-4327-8961-c3f21d8af26b",
+ CellID->342744395],
+Cell[32073, 788, 437, 8, 104, "Text",ExpressionUUID->"ee79e4f9-ea97-4da3-b5e4-4fcdaf2c8755",
+ CellID->31174452],
+Cell[32513, 798, 368, 7, 63, "ItemNumbered",ExpressionUUID->"765439c2-3b8a-4e41-950d-cad1e008fec8",
+ CellID->540130245]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32918, 810, 192, 3, 133, "Section",ExpressionUUID->"5201fa5f-e37b-411b-b6f1-812910874330",
+ CellID->555651846],
+Cell[33113, 815, 382, 7, 75, "Text",ExpressionUUID->"e28cf86e-26fc-4e15-88d0-2eba5db89f23",
+ CellID->1581678566],
+Cell[33498, 824, 285, 6, 38, "ItemNumbered",ExpressionUUID->"adf42482-293e-4d3b-831c-2ac2eb0d10b6",
+ CellID->1012341244],
+Cell[33786, 832, 354, 6, 75, "Text",ExpressionUUID->"1445a36e-19df-46ca-bf86-4f911e97467b",
+ CellID->1812348955],
+Cell[CellGroupData[{
+Cell[34165, 842, 323, 6, 63, "ItemNumbered",ExpressionUUID->"cce3147c-84b6-4753-b251-1bf6c4df75c3",
+ CellID->155921863],
+Cell[34491, 850, 283, 6, 38, "ItemNumbered",ExpressionUUID->"8bb0098b-085f-42a2-acc9-6ef48666fd52",
+ CellID->1136802316]
+}, Open  ]],
+Cell[34789, 859, 358, 7, 75, "Text",ExpressionUUID->"a8c7a001-b9a8-4851-9a3e-c8418c27d7a7",
+ CellID->543828708],
+Cell[CellGroupData[{
+Cell[35172, 870, 446, 8, 63, "ItemNumbered",ExpressionUUID->"4b1913a1-cf28-4999-ae97-73a7e153c225",
+ CellID->273264382],
+Cell[35621, 880, 410, 8, 63, "ItemNumbered",ExpressionUUID->"decfad80-e8b3-44d0-8774-a40903f2d428",
+ CellID->870883299]
+}, Open  ]],
+Cell[36046, 891, 408, 8, 75, "Text",ExpressionUUID->"856b22d8-4389-40db-b3ed-1b26cd27605c",
+ CellID->1578762242],
+Cell[36457, 901, 296, 6, 38, "ItemNumbered",ExpressionUUID->"cdb92e91-1247-44a5-934b-cefa8982b349",
+ CellID->1150542322],
+Cell[36756, 909, 565, 10, 134, "Text",ExpressionUUID->"4f72158e-3a21-4e17-a71a-ae10a8ff5488",
+ CellID->1962438559],
+Cell[37324, 921, 438, 8, 63, "ItemNumbered",ExpressionUUID->"29a421ec-6134-48a0-b73f-a0415b425e2c",
+ CellID->1419812514],
+Cell[37765, 931, 404, 8, 75, "Text",ExpressionUUID->"0617cebf-42b3-44eb-8ae2-fd8f1ccbd2e9",
+ CellID->209401398],
+Cell[38172, 941, 378, 7, 63, "ItemNumbered",ExpressionUUID->"8edfef03-525b-48d9-9427-9b8ba30e58dc",
+ CellID->1726319984],
+Cell[38553, 950, 530, 9, 134, "Text",ExpressionUUID->"99ed6f7e-d6d6-4802-a91b-c929157e9298",
+ CellID->1550578983],
+Cell[CellGroupData[{
+Cell[39108, 963, 426, 8, 63, "ItemNumbered",ExpressionUUID->"abe09ac5-8d36-4104-8b06-0db1657b30b9",
+ CellID->82811155],
+Cell[39537, 973, 289, 6, 38, "ItemNumbered",ExpressionUUID->"37a7c27a-d93b-4d51-a43f-811c8315fe3a",
+ CellID->977358112]
+}, Open  ]],
+Cell[39841, 982, 409, 8, 75, "Text",ExpressionUUID->"efd51497-9e98-4dbb-b2b9-34ee79930246",
+ CellID->252735999],
+Cell[CellGroupData[{
+Cell[40275, 994, 437, 8, 63, "ItemNumbered",ExpressionUUID->"6bae2941-480d-4edb-b580-b04f13239fc3",
+ CellID->2050156672],
+Cell[40715, 1004, 423, 8, 63, "ItemNumbered",ExpressionUUID->"a1c9800b-87c8-433c-9f20-293a7e751c51",
+ CellID->1496489132],
+Cell[41141, 1014, 463, 8, 63, "ItemNumbered",ExpressionUUID->"adc5286f-3e2a-46a9-a96a-c7b4dfe876e0",
+ CellID->1602507292],
+Cell[41607, 1024, 504, 9, 88, "ItemNumbered",ExpressionUUID->"a52340c6-1ff9-49b2-9f7b-38b39f5ee9ba",
+ CellID->1485092730]
+}, Open  ]],
+Cell[42126, 1036, 237, 3, 45, "Text",ExpressionUUID->"45aa5e74-6ffa-4ef0-8579-7d9178b3deeb",
+ CellID->1591610700],
+Cell[42366, 1041, 341, 7, 38, "ItemNumbered",ExpressionUUID->"203545ef-7c35-42ad-b214-9b3ba63f00f5",
+ CellID->1680539895],
+Cell[42710, 1050, 444, 8, 104, "Text",ExpressionUUID->"88bf0370-ba98-416d-a7d0-f684a780bd7c",
+ CellID->1767555799],
+Cell[43157, 1060, 251, 4, 38, "ItemNumbered",ExpressionUUID->"f611edaf-7250-4f87-bd9f-c9e9f7abc6af",
+ CellID->2350184],
+Cell[43411, 1066, 401, 7, 104, "Text",ExpressionUUID->"f20af432-99ea-479e-ab54-c2844e2d0361",
+ CellID->1156500715],
+Cell[43815, 1075, 387, 7, 63, "ItemNumbered",ExpressionUUID->"aa7ebca1-f849-48e9-81b6-48a618aea991",
+ CellID->1458775940]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44239, 1087, 193, 3, 133, "Section",ExpressionUUID->"63c71a9a-1acf-41e4-b744-6656a9e3e5dd",
+ CellID->1973909428],
+Cell[44435, 1092, 264, 5, 45, "Text",ExpressionUUID->"39b370ea-1f87-4b89-9489-0b0d69d388e1",
+ CellID->1168377540],
+Cell[CellGroupData[{
+Cell[44724, 1101, 314, 6, 38, "ItemNumbered",ExpressionUUID->"89f8996f-f692-4cd9-90a9-fa1b5a67d7da",
+ CellID->1196449731],
+Cell[45041, 1109, 294, 4, 38, "ItemNumbered",ExpressionUUID->"7235940a-0f9f-413c-884c-c8c3ce17fe35",
+ CellID->1035980115]
+}, Open  ]],
+Cell[45350, 1116, 395, 7, 104, "Text",ExpressionUUID->"74a82254-db7f-4976-8031-2c9a0a66694c",
+ CellID->1250313459],
+Cell[45748, 1125, 260, 5, 38, "ItemNumbered",ExpressionUUID->"171c962f-442d-44fa-aff6-1a7efed6ed83",
+ CellID->69753419],
+Cell[46011, 1132, 409, 7, 104, "Text",ExpressionUUID->"61193fa5-947b-4a37-887e-492f012a45f7",
+ CellID->1369450649],
+Cell[46423, 1141, 359, 7, 63, "ItemNumbered",ExpressionUUID->"d9e9d5a3-50ee-4bd0-8c8c-ea6905ef08ae",
+ CellID->1863677271],
+Cell[46785, 1150, 493, 9, 104, "Text",ExpressionUUID->"ff7fae4b-a832-4c50-83fb-fb8f1623078a",
+ CellID->1764190575],
+Cell[47281, 1161, 321, 5, 38, "ItemNumbered",ExpressionUUID->"43ba069b-2edf-47bc-be6d-ac46c07be62a",
+ CellID->1795974786],
+Cell[47605, 1168, 388, 7, 75, "Text",ExpressionUUID->"694bba7b-8e9c-45f6-b76e-a5e3d5b240fa",
+ CellID->244366874],
+Cell[47996, 1177, 287, 4, 38, "ItemNumbered",ExpressionUUID->"0a3c53db-75d3-4e42-a610-798cb6cf230f",
+ CellID->1208095032],
+Cell[48286, 1183, 476, 9, 104, "Text",ExpressionUUID->"9abe3323-de73-416c-b110-1a74aa5312f7",
+ CellID->1925388691],
+Cell[48765, 1194, 272, 4, 38, "ItemNumbered",ExpressionUUID->"80801c51-22be-47fd-a9df-7cf7776917a4",
+ CellID->458977969],
+Cell[49040, 1200, 484, 9, 104, "Text",ExpressionUUID->"5dde0ba6-0655-48b0-a121-78ae1f58d805",
+ CellID->314964925],
+Cell[CellGroupData[{
+Cell[49549, 1213, 438, 8, 63, "ItemNumbered",ExpressionUUID->"aa1847ad-279c-492b-9549-9daf161ce131",
+ CellID->1363135594],
+Cell[49990, 1223, 412, 8, 63, "ItemNumbered",ExpressionUUID->"182988d4-744f-4b11-baab-f9de2cce5f2e",
+ CellID->1502998039],
+Cell[50405, 1233, 370, 7, 63, "ItemNumbered",ExpressionUUID->"d76a4748-0acd-4982-b7c9-868bf3c55bee",
+ CellID->1110459748]
+}, Open  ]],
+Cell[50790, 1243, 423, 8, 104, "Text",ExpressionUUID->"b4f998af-f08a-4db4-a720-a0fc8b345f1f",
+ CellID->1443442739],
+Cell[CellGroupData[{
+Cell[51238, 1255, 360, 7, 38, "ItemNumbered",ExpressionUUID->"50665a34-f4b2-456a-8df8-6123ef0ab506",
+ CellID->1872984242],
+Cell[51601, 1264, 379, 7, 63, "ItemNumbered",ExpressionUUID->"c7f2ba0d-1676-4d10-a160-82349ea2c93c",
+ CellID->1380037599]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52029, 1277, 193, 3, 133, "Section",ExpressionUUID->"9b96b96a-d23d-4e84-bd92-f0046fbd697a",
+ CellID->1468538793],
+Cell[52225, 1282, 440, 8, 104, "Text",ExpressionUUID->"5f54bddd-e3c6-4274-bfaa-a73c5becab4f",
+ CellID->701938980],
+Cell[52668, 1292, 374, 7, 63, "ItemNumbered",ExpressionUUID->"51809772-c7cf-41b0-90b4-e2399e9a2f07",
+ CellID->309566177],
+Cell[53045, 1301, 303, 7, 45, "Text",ExpressionUUID->"7ccbff8f-49cc-49dc-aea5-8c4b3f002461",
+ CellID->1960157971],
+Cell[CellGroupData[{
+Cell[53373, 1312, 452, 8, 63, "ItemNumbered",ExpressionUUID->"51ceb440-d411-4109-acf4-5f6ba7061f95",
+ CellID->495247518],
+Cell[53828, 1322, 321, 6, 38, "ItemNumbered",ExpressionUUID->"ab83ba04-9cfe-42f7-a5f9-10e95d1d1b62",
+ CellID->869044794]
+}, Open  ]],
+Cell[54164, 1331, 542, 9, 78, "SubitemNumbered",ExpressionUUID->"e315bddc-2f5b-406d-aee7-6e199a3cb60d",
+ CellID->1228975425],
+Cell[54709, 1342, 327, 7, 75, "Text",ExpressionUUID->"1016fda0-5dcc-49a7-b7f6-49185e048e96",
+ CellID->161531627],
+Cell[55039, 1351, 223, 3, 38, "ItemNumbered",ExpressionUUID->"cb8341d2-78a7-48e4-8dde-d0f20db1c1b9",
+ CellID->2097882988],
+Cell[55265, 1356, 411, 8, 75, "Text",ExpressionUUID->"afc6015f-28d4-4e1f-b6cb-2f4b09a97f2f",
+ CellID->137488192],
+Cell[55679, 1366, 435, 8, 63, "ItemNumbered",ExpressionUUID->"874c9a8a-60e2-4181-aaf1-0e9ba90bec82",
+ CellID->2025275988],
+Cell[56117, 1376, 570, 10, 134, "Text",ExpressionUUID->"1fdb0f46-dcbb-429b-bdcd-6ae86a527667",
+ CellID->959075319],
+Cell[56690, 1388, 443, 8, 63, "ItemNumbered",ExpressionUUID->"f3a9d37e-5393-4acc-9f39-26023d335011",
+ CellID->906880782],
+Cell[57136, 1398, 566, 10, 134, "Text",ExpressionUUID->"26a38cb8-05c1-4dcd-841a-f2000e44faa6",
+ CellID->1021329671],
+Cell[57705, 1410, 367, 7, 38, "ItemNumbered",ExpressionUUID->"039e7cea-7b8e-4e4d-a39b-b2d388f4408f",
+ CellID->264789638],
+Cell[58075, 1419, 536, 9, 134, "Text",ExpressionUUID->"3efc41c8-59db-49d5-9d9c-9c63955a7b19",
+ CellID->1578177601],
+Cell[CellGroupData[{
+Cell[58636, 1432, 427, 8, 63, "ItemNumbered",ExpressionUUID->"03e3510c-50dd-4b09-b328-3ee43d5f6f7a",
+ CellID->1470144955],
+Cell[59066, 1442, 394, 8, 63, "ItemNumbered",ExpressionUUID->"3e56bbd9-59c0-4a7a-ae14-c3746fbd68af",
+ CellID->850784971],
+Cell[59463, 1452, 448, 8, 63, "ItemNumbered",ExpressionUUID->"306bd8a2-78dc-4043-861f-3f3e29ef80d7",
+ CellID->281636039]
+}, Open  ]],
+Cell[59926, 1463, 797, 13, 222, "Text",ExpressionUUID->"00ea03fb-0ee1-4643-911a-1824793527a3",
+ CellID->2126713064],
+Cell[60726, 1478, 418, 8, 63, "ItemNumbered",ExpressionUUID->"16e30ef2-f153-4080-81b6-46ef4c9f3967",
+ CellID->2018862949],
+Cell[61147, 1488, 452, 8, 104, "Text",ExpressionUUID->"b82e9945-b12f-4e37-895f-45236e678fb3",
+ CellID->100416194],
+Cell[CellGroupData[{
+Cell[61624, 1500, 336, 7, 38, "ItemNumbered",ExpressionUUID->"525ed171-0a20-4ea2-9e3f-7aaf9f7e305c",
+ CellID->1333520692],
+Cell[61963, 1509, 294, 5, 38, "ItemNumbered",ExpressionUUID->"3d5b8be4-a18a-4cf3-8167-663006bc3afa",
+ CellID->284334712]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62306, 1520, 193, 3, 133, "Section",ExpressionUUID->"be5db069-22ab-407d-b26d-5271f5e359a1",
+ CellID->662390009],
+Cell[62502, 1525, 385, 7, 104, "Text",ExpressionUUID->"aeb68611-3ecc-45e6-a220-8d866c5be035",
+ CellID->233655215],
+Cell[CellGroupData[{
+Cell[62912, 1536, 351, 6, 63, "ItemNumbered",ExpressionUUID->"34e6f49f-6864-449b-9fe4-8600108abc48",
+ CellID->27111467],
+Cell[63266, 1544, 305, 6, 63, "ItemNumbered",ExpressionUUID->"32b7fd3f-60c0-4b7c-a4ba-b450d900271e",
+ CellID->1627180595]
+}, Open  ]],
+Cell[63586, 1553, 338, 6, 75, "Text",ExpressionUUID->"efc7285e-0dfa-450c-be2b-aca49aca282a",
+ CellID->1620235336],
+Cell[63927, 1561, 328, 6, 38, "ItemNumbered",ExpressionUUID->"9c2f8ed3-0dc9-454b-a606-91f8e3a70544",
+ CellID->193397907],
+Cell[64258, 1569, 313, 7, 75, "Text",ExpressionUUID->"763d5d5e-4306-444c-b5e1-03c50c628d8f",
+ CellID->1783657122],
+Cell[64574, 1578, 440, 8, 63, "ItemNumbered",ExpressionUUID->"2f36744f-99c8-4cd5-bb19-20fa0336fe1d",
+ CellID->760801248],
+Cell[65017, 1588, 423, 8, 75, "Text",ExpressionUUID->"f3a04592-c066-488c-a82e-d85e1f170db1",
+ CellID->260754720],
+Cell[65443, 1598, 339, 7, 38, "ItemNumbered",ExpressionUUID->"9f0ccf44-d939-4189-9a2d-fe7253f097a8",
+ CellID->471320422],
+Cell[65785, 1607, 542, 9, 134, "Text",ExpressionUUID->"dd975042-765f-4fc8-883e-b0d8590d18b4",
+ CellID->692368113],
+Cell[66330, 1618, 369, 7, 63, "ItemNumbered",ExpressionUUID->"cbf9f388-11e4-4c8b-b40f-89396ccf5602",
+ CellID->216750192],
+Cell[66702, 1627, 678, 11, 193, "Text",ExpressionUUID->"56339b91-15b1-4a08-a17d-1f735b3abab4",
+ CellID->676890458],
+Cell[67383, 1640, 300, 5, 38, "ItemNumbered",ExpressionUUID->"aec38d14-bc62-45d9-b4d2-589bc9e7e896",
+ CellID->1305312730]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)
