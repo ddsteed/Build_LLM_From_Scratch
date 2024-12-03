@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5202,        146]
-NotebookOptionsPosition[      4759,        130]
-NotebookOutlinePosition[      5225,        147]
-CellTagsIndexPosition[      5182,        144]
+NotebookDataLength[      5506,        152]
+NotebookOptionsPosition[      4949,        134]
+NotebookOutlinePosition[      5414,        151]
+CellTagsIndexPosition[      5371,        148]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -126,10 +126,14 @@ Cell[TextData[{
  LineSpacing->{0.6999999999999997, 3},
  Background->RGBColor[
   0.13066300450141147`, 0.12460517280842298`, 0.4353551537346456],
- CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"]
+ CellID->912160115,ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3"],
+
+Cell["Appendix C: Exercise solutions", "Chapter",
+ CellChangeTimes->{{3.94220484469838*^9, 3.9422048781158*^9}},
+ CellID->568005749,ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32"]
 },
-WindowSize->{1024, 1099},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{960, 1027},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
   CharacterEncoding -> "UTF-8"],
@@ -147,7 +151,9 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[554, 20, 4201, 108, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
- CellID->912160115]
+ CellID->912160115],
+Cell[4758, 130, 187, 2, 84, "Chapter",ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32",
+ CellID->568005749]
 }
 ]
 *)
