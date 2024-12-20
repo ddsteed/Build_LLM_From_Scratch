@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[   3723006,      61391]
+NotebookDataLength[   3722934,      61390]
 NotebookOptionsPosition[   3709812,      61137]
-NotebookOutlinePosition[   3710462,      61161]
-CellTagsIndexPosition[   3710392,      61156]
+NotebookOutlinePosition[   3710390,      61160]
+CellTagsIndexPosition[   3710320,      61155]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61136,10 +61136,9 @@ tasks.\
 }, Open  ]]
 },
 WindowSize->{960, 1027},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
-StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
-  CharacterEncoding -> "UTF-8"],
+StyleDefinitions->"RDS-book.nb",
 ExpressionUUID->"905d2a50-0b58-46dd-b30d-96e410c6c0be"
 ]
 (* End of Notebook Content *)
@@ -61155,7 +61154,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"1.4", 3710222, 61149}
+ {"1.4", 3710150, 61148}
  }
 *)
 (*NotebookFileOutline
