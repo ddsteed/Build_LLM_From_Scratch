@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5955,        165]
-NotebookOptionsPosition[      5249,        143]
-NotebookOutlinePosition[      5714,        160]
-CellTagsIndexPosition[      5671,        157]
+NotebookDataLength[      5961,        165]
+NotebookOptionsPosition[      5252,        143]
+NotebookOutlinePosition[      5717,        160]
+CellTagsIndexPosition[      5674,        157]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -131,11 +131,11 @@ Cell[TextData[{
 
 Cell[CellGroupData[{
 
-Cell["Appendix C: Exercise solutions", "Chapter",
+Cell["Appendix C: Exercise solutions", "Section",
  CellChangeTimes->{{3.94220484469838*^9, 3.9422048781158*^9}},
  CellID->568005749,ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32"],
 
-Cell["Chapter 2", "Section",
+Cell["Chapter 2", "Subsection",
  CellChangeTimes->{3.652728456208679*^9, 3.652728527108994*^9, 
   3.9422065315078707`*^9},
  CellID->637476974,ExpressionUUID->"75725e69-4ee4-4cde-ac56-6514ae38e688"]
@@ -162,9 +162,9 @@ Notebook[{
 Cell[554, 20, 4270, 109, 130, "Text",ExpressionUUID->"43c10951-a2d7-4bae-8da9-a50305d2dac3",
  CellID->912160115],
 Cell[CellGroupData[{
-Cell[4849, 133, 187, 2, 84, "Chapter",ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32",
+Cell[4849, 133, 187, 2, 133, "Section",ExpressionUUID->"1f578246-c86c-4038-a395-715aa55f1a32",
  CellID->568005749],
-Cell[5039, 137, 194, 3, 133, "Section",ExpressionUUID->"75725e69-4ee4-4cde-ac56-6514ae38e688",
+Cell[5039, 137, 197, 3, 68, "Subsection",ExpressionUUID->"75725e69-4ee4-4cde-ac56-6514ae38e688",
  CellID->637476974]
 }, Open  ]]
 }
